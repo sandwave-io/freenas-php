@@ -1,0 +1,10 @@
+vendor
+.idea
+.env
+coverage
+.php_cs.cache
+
+html
+composer.lock
+.php_cs.cache
+clover.xml
