@@ -2,22 +2,37 @@
 
 namespace PCextreme\FreeNAS;
 
+use PCextreme\FreeNAS\Domain\Pool;
+use PCextreme\FreeNAS\Exceptions\NotFoundException;
+use PCextreme\FreeNAS\Support\BasicAuthClient;
+
 final class RestClient
 {
-    /** @var string */
-    private $baseUrl;
-
-    /** @var string */
-    private $username;
-
-    /** @var string */
-    private $password;
+    /** @var BasicAuthClient */
+    private $client;
 
     public function __construct(string $baseUrl, string $username, string $password)
     {
-        $this->baseUrl  = $baseUrl;
-        $this->username = $username;
-        $this->password = $password;
+        $this->client = new BasicAuthClient($baseUrl, $username, $password);
+    }
+
+    public function setClient(BasicAuthClient $client): void
+    {
+        $this->client = $client;
+    }
+
+    public function getPool(string $name): Pool
+    {
+        $pools = $this->client->get('pool');
+        foreach ($pools as $pool) {
+            if (is_array($pool) && isset($pool['name'])) {
+                if ($pool['name'] === $name) {
+                    return Pool::fromArray($pool);
+                }
+            }
+        }
+
+        throw new NotFoundException("Could not resolve pool [$name]");
     }
 
     public function createDataset(string $datasetId, int $size, ?string $comment = null)

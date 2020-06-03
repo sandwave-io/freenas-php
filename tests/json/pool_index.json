@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "name": "staging-vol01",
+    "guid": "11815425437305277672",
+    "encrypt": 0,
+    "encryptkey": "",
+    "path": "/mnt/staging-vol01",
+    "status": "ONLINE",
+    "scan": {
+      "function": "SCRUB",
+      "state": "FINISHED",
+      "start_time": {
+        "$date": 1589094001000
+      },
+      "end_time": {
+        "$date": 1589094060000
+      },
+      "percentage": 99.9917209148407,
+      "bytes_to_process": 2721669120,
+      "bytes_processed": 2721894400,
+      "errors": 0,
+      "total_secs_left": null,
+      "bytes_issued": 2721669120,
+      "pause": null
+    },
+    "topology": {
+      "data": [
+        {
+          "type": "DISK",
+          "path": "/dev/gptid/cc443df9-0a62-11e8-9127-3903ae80711a",
+          "guid": "10826096180001140594",
+          "status": "ONLINE",
+          "stats": {
+            "timestamp": 5110739866409,
+            "read_errors": 0,
+            "write_errors": 0,
+            "checksum_errors": 0,
+            "ops": [
+              1,
+              580,
+              44443,
+              77134,
+              0,
+              1274
+            ],
+            "bytes": [
+              0,
+              4513792,
+              790745088,
+              344523264,
+              0,
+              0
+            ],
+            "size": 19193135104,
+            "allocated": 2264084480,
+            "fragmentation": 53,
+            "self_healed": 0,
+            "configured_ashift": 12,
+            "logical_ashift": 9,
+            "physical_ashift": 0
+          },
+          "children": [],
+          "device": "vtbd1p2",
+          "disk": "vtbd1"
+        }
+      ],
+      "log": [],
+      "cache": [],
+      "spare": []
+    },
+    "healthy": true,
+    "status_detail": "Some supported features are not enabled on the pool. The pool can still be used, but some features are unavailable.",
+    "encryptkey_path": null,
+    "is_decrypted": true
+  }
+]

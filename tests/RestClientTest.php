@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class RestClientTest extends TestCase
 {
-    public function test_construct()
+    public function test_construct(): void
     {
         $client = new RestClient(
             "https://example.com/api/v2/",
