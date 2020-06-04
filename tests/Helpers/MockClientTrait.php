@@ -1,8 +1,6 @@
-<?php
-
+<?php declare(strict_types = 1);
 
 namespace PCextreme\FreeNAS\Tests\Helpers;
-
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
@@ -25,7 +23,7 @@ trait MockClientTrait
 
         if ($assertClosure !== null) {
             $handlerStack->push(function (callable $handler) use ($assertClosure) {
-                return function(RequestInterface $request, $options) use ($handler, $assertClosure) {
+                return function (RequestInterface $request, $options) use ($handler, $assertClosure) {
                     $assertClosure($request);
                     return $handler($request, $options);
                 };

@@ -1,8 +1,9 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace PCextreme\FreeNAS;
 
 use PCextreme\FreeNAS\Domain\Pool;
+use PCextreme\FreeNAS\Domain\User;
 use PCextreme\FreeNAS\Exceptions\NotFoundException;
 use PCextreme\FreeNAS\Support\BasicAuthClient;
 
@@ -23,7 +24,7 @@ final class RestClient
 
     public function getPool(string $name): Pool
     {
-        $pools = $this->client->get('pool');
+        $pools = $this->client->get('pool')->json();
         foreach ($pools as $pool) {
             if (is_array($pool) && isset($pool['name'])) {
                 if ($pool['name'] === $name) {
@@ -72,21 +73,27 @@ final class RestClient
 
     public function createUser(
         int $uid,
-        string $username,
+        string $name,
         string $home,
-        string $fullName,
         string $password,
         bool $createGroup = true
-    ) {
-        // TODO: Implement.
-        // uid, username, group_create, home, full_name, password
-        // POST: /user
+    ): int {
+        $response = $this->client->post('user', [
+            'uid'          => $uid,
+            'username'     => $name,
+            'home'         => $home,
+            'full_name'    => $name,
+            'password'     => $password,
+            'group_create' => $createGroup,
+        ], [], 200)->text();
+
+        return (int) $response;
     }
 
-    public function getUser(string $userId)
+    public function getUser(int $userId)
     {
-        // TODO: Implement.
-        // GET: /user/id/{id}
+        $user = $this->client->get("user/id/{$userId}")->json();
+        return User::fromArray($user);
     }
 
     public function updateUser(string $userId, string $password)

@@ -1,10 +1,6 @@
-<?php
-
+<?php declare(strict_types = 1);
 
 namespace PCextreme\FreeNAS\Domain;
-
-
-use PCextreme\FreeNAS\Exceptions\UnexpectedValueException;
 
 class Pool
 {

@@ -1,8 +1,6 @@
-<?php
-
+<?php declare(strict_types = 1);
 
 namespace PCextreme\FreeNAS\Support;
-
 
 use GuzzleHttp\Client;
 use PCextreme\FreeNAS\Exceptions\FreeNasClientException;
@@ -34,27 +32,27 @@ class BasicAuthClient
         $this->client = $client;
     }
 
-    public function get(string $endpoint, array $query = [], int $expectedResponse = 200): array
+    public function get(string $endpoint, array $query = [], int $expectedResponse = 200): FreeNasResponse
     {
         return $this->request('GET', $endpoint, [], $query, $expectedResponse);
     }
 
-    public function post(string $endpoint, array $body = [], array $query = [], int $expectedResponse = 201): array
+    public function post(string $endpoint, array $body = [], array $query = [], int $expectedResponse = 201): FreeNasResponse
     {
         return $this->request('POST', $endpoint, $body, $query, $expectedResponse);
     }
 
-    public function put(string $endpoint, array $body = [], array $query = [], int $expectedResponse = 200): array
+    public function put(string $endpoint, array $body = [], array $query = [], int $expectedResponse = 200): FreeNasResponse
     {
         return $this->request('PUT', $endpoint, $body, $query, $expectedResponse);
     }
 
-    public function delete(string $endpoint, array $query = [], int $expectedResponse = 200): array
+    public function delete(string $endpoint, array $query = [], int $expectedResponse = 200): FreeNasResponse
     {
         return $this->request('DELETE', $endpoint, [], $query, $expectedResponse);
     }
 
-    private function request(string $method, string $endpoint, array $body = [], array $query = [], int $expectedResponse = 200): array
+    private function request(string $method, string $endpoint, array $body = [], array $query = [], int $expectedResponse = 200): FreeNasResponse
     {
         $metaData = [
             'headers' => [
@@ -62,7 +60,6 @@ class BasicAuthClient
             ],
             'http_errors' => false,
         ];
-
 
         if ($body !== []) {
             $metaData['json'] = $body;
@@ -73,19 +70,14 @@ class BasicAuthClient
         return $this->handleResponse($response, $expectedResponse);
     }
 
-    private function handleResponse(ResponseInterface $response, int $expectedResponse): array
+    /** @return array|string */
+    private function handleResponse(ResponseInterface $response, int $expectedResponse): FreeNasResponse
     {
         if ($response->getStatusCode() !== $expectedResponse) {
             throw new FreeNasClientException("Unexpected response (got {$response->getStatusCode()}, expected {$expectedResponse}). Body: " . $response->getBody());
         }
 
-        $json = json_decode((string) $response->getBody(), true);
-
-        if (json_last_error() || $json === false) {
-            throw new FreeNasClientException("Could not parse JSON reponse body:\n" . $response->getBody());
-        }
-
-        return $json;
+        return FreeNasResponse::fromString((string) $response->getBody());
     }
 
     private function buildQuery(array $parameters): string

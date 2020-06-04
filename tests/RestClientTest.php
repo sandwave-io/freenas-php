@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace PCextreme\FreeNAS\Tests;
 
@@ -10,9 +10,9 @@ class RestClientTest extends TestCase
     public function test_construct(): void
     {
         $client = new RestClient(
-            "https://example.com/api/v2/",
-            "root",
-            "adminadmin"
+            'https://example.com/api/v2/',
+            'root',
+            'adminadmin'
         );
         $this->assertInstanceOf(RestClient::class, $client);
     }

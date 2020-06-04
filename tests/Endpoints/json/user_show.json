@@ -1,0 +1,28 @@
+{
+  "id": 42,
+  "uid": 1002,
+  "username": "6qzx5y2pqvvp",
+  "unixhash": "$6$cUa9TMe1XGtqvnYP$rCqX9Faw0Xye9FpZC58uoZVRSni8e3j30OynnY37UooGR9qaTWSZ.B51lOcqv4zduCJjQ1vRvswk.fJf1dkYr0",
+  "smbhash": "6qzx5y2pqvvp:1002:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:3008C87294511142799DCA1191E69A0F:[U          ]:LCT-5CB5F3E7:",
+  "group": {
+    "id": 49,
+    "bsdgrp_gid": 1009,
+    "bsdgrp_group": "6qzx5y2pqvvp",
+    "bsdgrp_builtin": false,
+    "bsdgrp_sudo": false
+  },
+  "home": "/mnt/staging-vol01/6qzx5y2pqvvp",
+  "shell": "/bin/csh",
+  "full_name": "6qzx5y2pqvvp",
+  "builtin": false,
+  "email": null,
+  "password_disabled": false,
+  "locked": false,
+  "sudo": false,
+  "microsoft_account": false,
+  "attributes": {},
+  "groups": [],
+  "sshpubkey": "\n",
+  "local": true,
+  "id_type_both": false
+}
