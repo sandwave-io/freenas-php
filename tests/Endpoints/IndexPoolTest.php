@@ -13,9 +13,9 @@ class IndexPoolTest extends TestCase
 {
     use MockClientTrait;
 
-    public function test_pool_endpoint()
+    public function test_pool_endpoint(): void
     {
-        $response = file_get_contents(__DIR__ . '/json/pool_index.json');
+        $response = (string) file_get_contents(__DIR__ . '/json/pool_index.json');
         $client = $this->getMockedClientWithResponse(200, $response, function (RequestInterface $request) {
             $this->assertSame('GET', strtoupper($request->getMethod()));
             $this->assertSame('pool', $request->getUri()->getPath());
@@ -27,9 +27,9 @@ class IndexPoolTest extends TestCase
         $this->assertInstanceOf(Pool::class, $pool);
     }
 
-    public function test_pool_endpoint_wrong_name()
+    public function test_pool_endpoint_wrong_name(): void
     {
-        $response = file_get_contents(__DIR__ . '/json/pool_index.json');
+        $response = (string) file_get_contents(__DIR__ . '/json/pool_index.json');
         $client = $this->getMockedClientWithResponse(200, $response, function (RequestInterface $request) {
             $this->assertSame('GET', strtoupper($request->getMethod()));
             $this->assertSame('pool', $request->getUri()->getPath());
@@ -41,7 +41,7 @@ class IndexPoolTest extends TestCase
         $client->getPool('staging-vol02');
     }
 
-    public function test_pool_endpoint_internal_error()
+    public function test_pool_endpoint_internal_error(): void
     {
         $response = 'Oops something went horribly wrong.';
         $client = $this->getMockedClientWithResponse(500, $response, function (RequestInterface $request) {

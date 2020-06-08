@@ -12,9 +12,9 @@ class ShowUserTest extends TestCase
 {
     use MockClientTrait;
 
-    public function test_user_endpoint()
+    public function test_user_endpoint(): void
     {
-        $response = file_get_contents(__DIR__ . '/json/user_show.json');
+        $response = (string) file_get_contents(__DIR__ . '/json/user_show.json');
         $client = $this->getMockedClientWithResponse(200, $response, function (RequestInterface $request) {
             $this->assertSame('GET', strtoupper($request->getMethod()));
             $this->assertSame('user/id/42', $request->getUri()->getPath());
@@ -32,7 +32,7 @@ class ShowUserTest extends TestCase
         $this->assertSame('/mnt/staging-vol01/6qzx5y2pqvvp', $user->getHomeDir());
     }
 
-    public function test_user_endpoint_404()
+    public function test_user_endpoint_404(): void
     {
         $client = $this->getMockedClientWithResponse(404, '', function (RequestInterface $request) {
             $this->assertSame('GET', strtoupper($request->getMethod()));

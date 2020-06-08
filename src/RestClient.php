@@ -2,6 +2,8 @@
 
 namespace PCextreme\FreeNAS;
 
+use PCextreme\FreeNAS\Domain\Dataset;
+use PCextreme\FreeNAS\Domain\DatasetCollection;
 use PCextreme\FreeNAS\Domain\Pool;
 use PCextreme\FreeNAS\Domain\User;
 use PCextreme\FreeNAS\Exceptions\NotFoundException;
@@ -36,40 +38,24 @@ final class RestClient
         throw new NotFoundException("Could not resolve pool [$name]");
     }
 
-    public function createDataset(string $datasetId, int $size, ?string $comment = null)
+    public function createDataset(string $volume, string $name, int $size, ?string $comment = null): Dataset
     {
-        // TODO: Implement.
-        // name -> datasetId
-        // type -> 'VOLUME'
-        // volsize & quota -> size
-        // if $comment: comments -> $comment. else skip.
-        // POST: /pool/dataset
+        $response = $this->client->post('pool/dataset', [
+            'name' => $name,
+            'type' => 'VOLUME',
+            'volsize' => $size,
+            'comments' => $comment ?? '',
+        ], [], 200)->json();
+
+        return Dataset::fromArray($response);
     }
 
-    public function getDataset(string $datasetId)
+    public function getDataset(string $volume, string $datasetId): Dataset
     {
-        // TODO: Implement.
-        // GET: /pool/dataset/id/{id}
+        $collection = DatasetCollection::fromArray($this->client->get("pool/dataset/id/{$volume}")->json());
+        return $collection->getDataset("{$volume}/{$datasetId}");
     }
 
-    public function updateDatasetQuota(string $datasetId, int $size)
-    {
-        // TODO: Implement.
-        // update volsize and quota.
-        // PUT: /pool/dataset/id/{id}
-    }
-
-    public function createTask(string $datasetId, int $intervalDays, int $lifetimeDays)
-    {
-        // TODO: Implement.
-        // POST: /pool/snapshottask
-    }
-
-    public function deleteTask(string $taskId)
-    {
-        // TODO: Implement.
-        // DELETE: /pool/snapshottask/id/{id}
-    }
 
     public function createUser(
         int $uid,
@@ -90,22 +76,21 @@ final class RestClient
         return (int) $response;
     }
 
-    public function getUser(int $userId)
+    public function getUser(int $userId): User
     {
         $user = $this->client->get("user/id/{$userId}")->json();
         return User::fromArray($user);
     }
 
-    public function updateUser(string $userId, string $password)
+    public function updateUserPassword(int $userId, string $password): void
     {
-        // TODO: Implement.
-        // password
-        // UPDATE: /user/id/{id}
+        $this->client->put("user/id/{$userId}", [
+            'password' => $password,
+        ]);
     }
 
-    public function deleteUser(string $userId)
+    public function deleteUser(int $userId): void
     {
-        // TODO: Implement.
-        // DELETE: /user/id/{id}
+        $this->client->delete("user/id/{$userId}");
     }
 }

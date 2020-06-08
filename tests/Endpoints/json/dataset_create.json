@@ -1,0 +1,80 @@
+{
+  "id": "staging-vol01/asdfasdfasdf",
+  "name": "staging-vol01/asdfasdfasdf",
+  "pool": "staging-vol01",
+  "type": "VOLUME",
+  "mountpoint": null,
+  "children": [],
+  "comments": {
+    "value": "",
+    "rawvalue": "",
+    "parsed": "",
+    "source": "LOCAL"
+  },
+  "deduplication": {
+    "value": "OFF",
+    "rawvalue": "off",
+    "parsed": "off",
+    "source": "DEFAULT"
+  },
+  "sync": {
+    "value": "STANDARD",
+    "rawvalue": "standard",
+    "parsed": "standard",
+    "source": "DEFAULT"
+  },
+  "compression": {
+    "value": "LZ4",
+    "rawvalue": "lz4",
+    "parsed": "lz4",
+    "source": "INHERITED"
+  },
+  "compressratio": {
+    "value": "1.00x",
+    "rawvalue": "1.00x",
+    "parsed": "1.00x",
+    "source": "NONE"
+  },
+  "origin": {
+    "value": "",
+    "rawvalue": "",
+    "parsed": "",
+    "source": "NONE"
+  },
+  "reservation": {
+    "value": null,
+    "rawvalue": "0",
+    "parsed": null,
+    "source": "DEFAULT"
+  },
+  "refreservation": {
+    "value": "1.03G",
+    "rawvalue": "1109393408",
+    "parsed": 1109393408,
+    "source": "LOCAL"
+  },
+  "copies": {
+    "value": "1",
+    "rawvalue": "1",
+    "parsed": 1,
+    "source": "DEFAULT"
+  },
+  "readonly": {
+    "value": "OFF",
+    "rawvalue": "off",
+    "parsed": false,
+    "source": "DEFAULT"
+  },
+  "volsize": {
+    "value": "1G",
+    "rawvalue": "1073741824",
+    "parsed": 1073741824,
+    "source": "LOCAL"
+  },
+  "volblocksize": {
+    "value": "8K",
+    "rawvalue": "8192",
+    "parsed": 8192,
+    "source": "DEFAULT"
+  }
+}

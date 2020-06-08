@@ -70,7 +70,6 @@ class BasicAuthClient
         return $this->handleResponse($response, $expectedResponse);
     }
 
-    /** @return array|string */
     private function handleResponse(ResponseInterface $response, int $expectedResponse): FreeNasResponse
     {
         if ($response->getStatusCode() !== $expectedResponse) {

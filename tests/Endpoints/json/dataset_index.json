@@ -1,0 +1,2172 @@
+{
+  "id": "staging-vol01",
+  "name": "staging-vol01",
+  "pool": "staging-vol01",
+  "type": "FILESYSTEM",
+  "mountpoint": "/mnt/staging-vol01",
+  "children": [
+    {
+      "id": "staging-vol01/mj4io2xak1ga",
+      "name": "staging-vol01/mj4io2xak1ga",
+      "pool": "staging-vol01",
+      "type": "FILESYSTEM",
+      "mountpoint": "/mnt/staging-vol01/mj4io2xak1ga",
+      "children": [],
+      "deduplication": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": "off",
+        "source": "DEFAULT"
+      },
+      "aclmode": {
+        "value": "PASSTHROUGH",
+        "rawvalue": "passthrough",
+        "parsed": "passthrough",
+        "source": "LOCAL"
+      },
+      "atime": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "casesensitivity": {
+        "value": "SENSITIVE",
+        "rawvalue": "sensitive",
+        "parsed": "sensitive",
+        "source": "NONE"
+      },
+      "exec": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "sync": {
+        "value": "STANDARD",
+        "rawvalue": "standard",
+        "parsed": "standard",
+        "source": "DEFAULT"
+      },
+      "compression": {
+        "value": "LZ4",
+        "rawvalue": "lz4",
+        "parsed": "lz4",
+        "source": "INHERITED"
+      },
+      "compressratio": {
+        "value": "1.02x",
+        "rawvalue": "1.02x",
+        "parsed": "1.02x",
+        "source": "NONE"
+      },
+      "origin": {
+        "value": "",
+        "rawvalue": "",
+        "parsed": "",
+        "source": "NONE"
+      },
+      "quota": {
+        "value": "1T",
+        "rawvalue": "1099511627776",
+        "parsed": 1099511627776,
+        "source": "LOCAL"
+      },
+      "refquota": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "reservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "refreservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "copies": {
+        "value": "1",
+        "rawvalue": "1",
+        "parsed": 1,
+        "source": "DEFAULT"
+      },
+      "snapdir": {
+        "value": "HIDDEN",
+        "rawvalue": "hidden",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "readonly": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": false,
+        "source": "DEFAULT"
+      },
+      "recordsize": {
+        "value": "128K",
+        "rawvalue": "131072",
+        "parsed": 131072,
+        "source": "DEFAULT"
+      }
+    },
+    {
+      "id": "staging-vol01/tkyp9wdqip27",
+      "name": "staging-vol01/tkyp9wdqip27",
+      "pool": "staging-vol01",
+      "type": "FILESYSTEM",
+      "mountpoint": "/mnt/staging-vol01/tkyp9wdqip27",
+      "children": [],
+      "deduplication": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": "off",
+        "source": "DEFAULT"
+      },
+      "aclmode": {
+        "value": "PASSTHROUGH",
+        "rawvalue": "passthrough",
+        "parsed": "passthrough",
+        "source": "LOCAL"
+      },
+      "atime": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "casesensitivity": {
+        "value": "SENSITIVE",
+        "rawvalue": "sensitive",
+        "parsed": "sensitive",
+        "source": "NONE"
+      },
+      "exec": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "sync": {
+        "value": "STANDARD",
+        "rawvalue": "standard",
+        "parsed": "standard",
+        "source": "DEFAULT"
+      },
+      "compression": {
+        "value": "LZ4",
+        "rawvalue": "lz4",
+        "parsed": "lz4",
+        "source": "INHERITED"
+      },
+      "compressratio": {
+        "value": "1.02x",
+        "rawvalue": "1.02x",
+        "parsed": "1.02x",
+        "source": "NONE"
+      },
+      "origin": {
+        "value": "",
+        "rawvalue": "",
+        "parsed": "",
+        "source": "NONE"
+      },
+      "quota": {
+        "value": "1T",
+        "rawvalue": "1099511627776",
+        "parsed": 1099511627776,
+        "source": "LOCAL"
+      },
+      "refquota": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "reservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "refreservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "copies": {
+        "value": "1",
+        "rawvalue": "1",
+        "parsed": 1,
+        "source": "DEFAULT"
+      },
+      "snapdir": {
+        "value": "HIDDEN",
+        "rawvalue": "hidden",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "readonly": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": false,
+        "source": "DEFAULT"
+      },
+      "recordsize": {
+        "value": "128K",
+        "rawvalue": "131072",
+        "parsed": 131072,
+        "source": "DEFAULT"
+      }
+    },
+    {
+      "id": "staging-vol01/qsnkro9ckqly",
+      "name": "staging-vol01/qsnkro9ckqly",
+      "pool": "staging-vol01",
+      "type": "FILESYSTEM",
+      "mountpoint": "/mnt/staging-vol01/qsnkro9ckqly",
+      "children": [],
+      "deduplication": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": "off",
+        "source": "DEFAULT"
+      },
+      "aclmode": {
+        "value": "PASSTHROUGH",
+        "rawvalue": "passthrough",
+        "parsed": "passthrough",
+        "source": "LOCAL"
+      },
+      "atime": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "casesensitivity": {
+        "value": "SENSITIVE",
+        "rawvalue": "sensitive",
+        "parsed": "sensitive",
+        "source": "NONE"
+      },
+      "exec": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "sync": {
+        "value": "STANDARD",
+        "rawvalue": "standard",
+        "parsed": "standard",
+        "source": "DEFAULT"
+      },
+      "compression": {
+        "value": "LZ4",
+        "rawvalue": "lz4",
+        "parsed": "lz4",
+        "source": "INHERITED"
+      },
+      "compressratio": {
+        "value": "1.02x",
+        "rawvalue": "1.02x",
+        "parsed": "1.02x",
+        "source": "NONE"
+      },
+      "origin": {
+        "value": "",
+        "rawvalue": "",
+        "parsed": "",
+        "source": "NONE"
+      },
+      "quota": {
+        "value": "1T",
+        "rawvalue": "1099511627776",
+        "parsed": 1099511627776,
+        "source": "LOCAL"
+      },
+      "refquota": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "reservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "refreservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "copies": {
+        "value": "1",
+        "rawvalue": "1",
+        "parsed": 1,
+        "source": "DEFAULT"
+      },
+      "snapdir": {
+        "value": "HIDDEN",
+        "rawvalue": "hidden",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "readonly": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": false,
+        "source": "DEFAULT"
+      },
+      "recordsize": {
+        "value": "128K",
+        "rawvalue": "131072",
+        "parsed": 131072,
+        "source": "DEFAULT"
+      }
+    },
+    {
+      "id": "staging-vol01/scdqkigwtp5f",
+      "name": "staging-vol01/scdqkigwtp5f",
+      "pool": "staging-vol01",
+      "type": "FILESYSTEM",
+      "mountpoint": "/mnt/staging-vol01/scdqkigwtp5f",
+      "children": [],
+      "deduplication": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": "off",
+        "source": "DEFAULT"
+      },
+      "aclmode": {
+        "value": "PASSTHROUGH",
+        "rawvalue": "passthrough",
+        "parsed": "passthrough",
+        "source": "LOCAL"
+      },
+      "atime": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "casesensitivity": {
+        "value": "SENSITIVE",
+        "rawvalue": "sensitive",
+        "parsed": "sensitive",
+        "source": "NONE"
+      },
+      "exec": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "sync": {
+        "value": "STANDARD",
+        "rawvalue": "standard",
+        "parsed": "standard",
+        "source": "DEFAULT"
+      },
+      "compression": {
+        "value": "LZ4",
+        "rawvalue": "lz4",
+        "parsed": "lz4",
+        "source": "INHERITED"
+      },
+      "compressratio": {
+        "value": "1.00x",
+        "rawvalue": "1.00x",
+        "parsed": "1.00x",
+        "source": "NONE"
+      },
+      "origin": {
+        "value": "",
+        "rawvalue": "",
+        "parsed": "",
+        "source": "NONE"
+      },
+      "quota": {
+        "value": "1T",
+        "rawvalue": "1099511627776",
+        "parsed": 1099511627776,
+        "source": "LOCAL"
+      },
+      "refquota": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "reservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "refreservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "copies": {
+        "value": "1",
+        "rawvalue": "1",
+        "parsed": 1,
+        "source": "DEFAULT"
+      },
+      "snapdir": {
+        "value": "HIDDEN",
+        "rawvalue": "hidden",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "readonly": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": false,
+        "source": "DEFAULT"
+      },
+      "recordsize": {
+        "value": "128K",
+        "rawvalue": "131072",
+        "parsed": 131072,
+        "source": "DEFAULT"
+      }
+    },
+    {
+      "id": "staging-vol01/test01",
+      "name": "staging-vol01/test01",
+      "pool": "staging-vol01",
+      "type": "FILESYSTEM",
+      "mountpoint": "/mnt/staging-vol01/test01",
+      "children": [],
+      "deduplication": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": "off",
+        "source": "DEFAULT"
+      },
+      "aclmode": {
+        "value": "PASSTHROUGH",
+        "rawvalue": "passthrough",
+        "parsed": "passthrough",
+        "source": "INHERITED"
+      },
+      "atime": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "casesensitivity": {
+        "value": "SENSITIVE",
+        "rawvalue": "sensitive",
+        "parsed": "sensitive",
+        "source": "NONE"
+      },
+      "exec": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "sync": {
+        "value": "STANDARD",
+        "rawvalue": "standard",
+        "parsed": "standard",
+        "source": "DEFAULT"
+      },
+      "compression": {
+        "value": "LZ4",
+        "rawvalue": "lz4",
+        "parsed": "lz4",
+        "source": "INHERITED"
+      },
+      "compressratio": {
+        "value": "7.19x",
+        "rawvalue": "7.19x",
+        "parsed": "7.19x",
+        "source": "NONE"
+      },
+      "origin": {
+        "value": "staging-vol01/.warden-template-standard-11.0-x64@clean",
+        "rawvalue": "staging-vol01/.warden-template-standard-11.0-x64@clean",
+        "parsed": "staging-vol01/.warden-template-standard-11.0-x64@clean",
+        "source": "NONE"
+      },
+      "quota": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "refquota": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "reservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "refreservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "copies": {
+        "value": "1",
+        "rawvalue": "1",
+        "parsed": 1,
+        "source": "DEFAULT"
+      },
+      "snapdir": {
+        "value": "HIDDEN",
+        "rawvalue": "hidden",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "readonly": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": false,
+        "source": "DEFAULT"
+      },
+      "recordsize": {
+        "value": "128K",
+        "rawvalue": "131072",
+        "parsed": 131072,
+        "source": "DEFAULT"
+      }
+    },
+    {
+      "id": "staging-vol01/.system",
+      "name": "staging-vol01/.system",
+      "pool": "staging-vol01",
+      "type": "FILESYSTEM",
+      "mountpoint": "/var/db/system",
+      "children": [
+        {
+          "id": "staging-vol01/.system/syslog-3bc724bbb18d493585697320a07060e7",
+          "name": "staging-vol01/.system/syslog-3bc724bbb18d493585697320a07060e7",
+          "pool": "staging-vol01",
+          "type": "FILESYSTEM",
+          "mountpoint": "/var/db/system/syslog-3bc724bbb18d493585697320a07060e7",
+          "children": [],
+          "deduplication": {
+            "value": "OFF",
+            "rawvalue": "off",
+            "parsed": "off",
+            "source": "DEFAULT"
+          },
+          "aclmode": {
+            "value": "PASSTHROUGH",
+            "rawvalue": "passthrough",
+            "parsed": "passthrough",
+            "source": "INHERITED"
+          },
+          "atime": {
+            "value": "ON",
+            "rawvalue": "on",
+            "parsed": true,
+            "source": "DEFAULT"
+          },
+          "casesensitivity": {
+            "value": "SENSITIVE",
+            "rawvalue": "sensitive",
+            "parsed": "sensitive",
+            "source": "NONE"
+          },
+          "exec": {
+            "value": "ON",
+            "rawvalue": "on",
+            "parsed": true,
+            "source": "DEFAULT"
+          },
+          "sync": {
+            "value": "STANDARD",
+            "rawvalue": "standard",
+            "parsed": "standard",
+            "source": "DEFAULT"
+          },
+          "compression": {
+            "value": "LZ4",
+            "rawvalue": "lz4",
+            "parsed": "lz4",
+            "source": "INHERITED"
+          },
+          "compressratio": {
+            "value": "1.00x",
+            "rawvalue": "1.00x",
+            "parsed": "1.00x",
+            "source": "NONE"
+          },
+          "origin": {
+            "value": "",
+            "rawvalue": "",
+            "parsed": "",
+            "source": "NONE"
+          },
+          "quota": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "refquota": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "reservation": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "refreservation": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "copies": {
+            "value": "1",
+            "rawvalue": "1",
+            "parsed": 1,
+            "source": "DEFAULT"
+          },
+          "snapdir": {
+            "value": "HIDDEN",
+            "rawvalue": "hidden",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "readonly": {
+            "value": "OFF",
+            "rawvalue": "off",
+            "parsed": false,
+            "source": "DEFAULT"
+          },
+          "recordsize": {
+            "value": "128K",
+            "rawvalue": "131072",
+            "parsed": 131072,
+            "source": "DEFAULT"
+          }
+        },
+        {
+          "id": "staging-vol01/.system/configs-3bc724bbb18d493585697320a07060e7",
+          "name": "staging-vol01/.system/configs-3bc724bbb18d493585697320a07060e7",
+          "pool": "staging-vol01",
+          "type": "FILESYSTEM",
+          "mountpoint": "/var/db/system/configs-3bc724bbb18d493585697320a07060e7",
+          "children": [],
+          "deduplication": {
+            "value": "OFF",
+            "rawvalue": "off",
+            "parsed": "off",
+            "source": "DEFAULT"
+          },
+          "aclmode": {
+            "value": "PASSTHROUGH",
+            "rawvalue": "passthrough",
+            "parsed": "passthrough",
+            "source": "INHERITED"
+          },
+          "atime": {
+            "value": "ON",
+            "rawvalue": "on",
+            "parsed": true,
+            "source": "DEFAULT"
+          },
+          "casesensitivity": {
+            "value": "SENSITIVE",
+            "rawvalue": "sensitive",
+            "parsed": "sensitive",
+            "source": "NONE"
+          },
+          "exec": {
+            "value": "ON",
+            "rawvalue": "on",
+            "parsed": true,
+            "source": "DEFAULT"
+          },
+          "sync": {
+            "value": "STANDARD",
+            "rawvalue": "standard",
+            "parsed": "standard",
+            "source": "DEFAULT"
+          },
+          "compression": {
+            "value": "LZ4",
+            "rawvalue": "lz4",
+            "parsed": "lz4",
+            "source": "INHERITED"
+          },
+          "compressratio": {
+            "value": "9.50x",
+            "rawvalue": "9.50x",
+            "parsed": "9.50x",
+            "source": "NONE"
+          },
+          "origin": {
+            "value": "",
+            "rawvalue": "",
+            "parsed": "",
+            "source": "NONE"
+          },
+          "quota": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "refquota": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "reservation": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "refreservation": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "copies": {
+            "value": "1",
+            "rawvalue": "1",
+            "parsed": 1,
+            "source": "DEFAULT"
+          },
+          "snapdir": {
+            "value": "HIDDEN",
+            "rawvalue": "hidden",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "readonly": {
+            "value": "OFF",
+            "rawvalue": "off",
+            "parsed": false,
+            "source": "DEFAULT"
+          },
+          "recordsize": {
+            "value": "128K",
+            "rawvalue": "131072",
+            "parsed": 131072,
+            "source": "DEFAULT"
+          }
+        },
+        {
+          "id": "staging-vol01/.system/cores",
+          "name": "staging-vol01/.system/cores",
+          "pool": "staging-vol01",
+          "type": "FILESYSTEM",
+          "mountpoint": "/var/db/system/cores",
+          "children": [],
+          "deduplication": {
+            "value": "OFF",
+            "rawvalue": "off",
+            "parsed": "off",
+            "source": "DEFAULT"
+          },
+          "aclmode": {
+            "value": "PASSTHROUGH",
+            "rawvalue": "passthrough",
+            "parsed": "passthrough",
+            "source": "INHERITED"
+          },
+          "atime": {
+            "value": "ON",
+            "rawvalue": "on",
+            "parsed": true,
+            "source": "DEFAULT"
+          },
+          "casesensitivity": {
+            "value": "SENSITIVE",
+            "rawvalue": "sensitive",
+            "parsed": "sensitive",
+            "source": "NONE"
+          },
+          "exec": {
+            "value": "ON",
+            "rawvalue": "on",
+            "parsed": true,
+            "source": "DEFAULT"
+          },
+          "sync": {
+            "value": "STANDARD",
+            "rawvalue": "standard",
+            "parsed": "standard",
+            "source": "DEFAULT"
+          },
+          "compression": {
+            "value": "LZ4",
+            "rawvalue": "lz4",
+            "parsed": "lz4",
+            "source": "INHERITED"
+          },
+          "compressratio": {
+            "value": "8.78x",
+            "rawvalue": "8.78x",
+            "parsed": "8.78x",
+            "source": "NONE"
+          },
+          "origin": {
+            "value": "",
+            "rawvalue": "",
+            "parsed": "",
+            "source": "NONE"
+          },
+          "quota": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "refquota": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "reservation": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "refreservation": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "copies": {
+            "value": "1",
+            "rawvalue": "1",
+            "parsed": 1,
+            "source": "DEFAULT"
+          },
+          "snapdir": {
+            "value": "HIDDEN",
+            "rawvalue": "hidden",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "readonly": {
+            "value": "OFF",
+            "rawvalue": "off",
+            "parsed": false,
+            "source": "DEFAULT"
+          },
+          "recordsize": {
+            "value": "128K",
+            "rawvalue": "131072",
+            "parsed": 131072,
+            "source": "DEFAULT"
+          }
+        },
+        {
+          "id": "staging-vol01/.system/webui",
+          "name": "staging-vol01/.system/webui",
+          "pool": "staging-vol01",
+          "type": "FILESYSTEM",
+          "mountpoint": "/var/db/system/webui",
+          "children": [],
+          "deduplication": {
+            "value": "OFF",
+            "rawvalue": "off",
+            "parsed": "off",
+            "source": "DEFAULT"
+          },
+          "aclmode": {
+            "value": "PASSTHROUGH",
+            "rawvalue": "passthrough",
+            "parsed": "passthrough",
+            "source": "INHERITED"
+          },
+          "atime": {
+            "value": "ON",
+            "rawvalue": "on",
+            "parsed": true,
+            "source": "DEFAULT"
+          },
+          "casesensitivity": {
+            "value": "SENSITIVE",
+            "rawvalue": "sensitive",
+            "parsed": "sensitive",
+            "source": "NONE"
+          },
+          "exec": {
+            "value": "ON",
+            "rawvalue": "on",
+            "parsed": true,
+            "source": "DEFAULT"
+          },
+          "sync": {
+            "value": "STANDARD",
+            "rawvalue": "standard",
+            "parsed": "standard",
+            "source": "DEFAULT"
+          },
+          "compression": {
+            "value": "LZ4",
+            "rawvalue": "lz4",
+            "parsed": "lz4",
+            "source": "INHERITED"
+          },
+          "compressratio": {
+            "value": "1.00x",
+            "rawvalue": "1.00x",
+            "parsed": "1.00x",
+            "source": "NONE"
+          },
+          "origin": {
+            "value": "",
+            "rawvalue": "",
+            "parsed": "",
+            "source": "NONE"
+          },
+          "quota": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "refquota": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "reservation": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "refreservation": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "copies": {
+            "value": "1",
+            "rawvalue": "1",
+            "parsed": 1,
+            "source": "DEFAULT"
+          },
+          "snapdir": {
+            "value": "HIDDEN",
+            "rawvalue": "hidden",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "readonly": {
+            "value": "OFF",
+            "rawvalue": "off",
+            "parsed": false,
+            "source": "DEFAULT"
+          },
+          "recordsize": {
+            "value": "128K",
+            "rawvalue": "131072",
+            "parsed": 131072,
+            "source": "DEFAULT"
+          }
+        },
+        {
+          "id": "staging-vol01/.system/rrd-3bc724bbb18d493585697320a07060e7",
+          "name": "staging-vol01/.system/rrd-3bc724bbb18d493585697320a07060e7",
+          "pool": "staging-vol01",
+          "type": "FILESYSTEM",
+          "mountpoint": "/var/db/system/rrd-3bc724bbb18d493585697320a07060e7",
+          "children": [],
+          "deduplication": {
+            "value": "OFF",
+            "rawvalue": "off",
+            "parsed": "off",
+            "source": "DEFAULT"
+          },
+          "aclmode": {
+            "value": "PASSTHROUGH",
+            "rawvalue": "passthrough",
+            "parsed": "passthrough",
+            "source": "INHERITED"
+          },
+          "atime": {
+            "value": "ON",
+            "rawvalue": "on",
+            "parsed": true,
+            "source": "DEFAULT"
+          },
+          "casesensitivity": {
+            "value": "SENSITIVE",
+            "rawvalue": "sensitive",
+            "parsed": "sensitive",
+            "source": "NONE"
+          },
+          "exec": {
+            "value": "ON",
+            "rawvalue": "on",
+            "parsed": true,
+            "source": "DEFAULT"
+          },
+          "sync": {
+            "value": "STANDARD",
+            "rawvalue": "standard",
+            "parsed": "standard",
+            "source": "DEFAULT"
+          },
+          "compression": {
+            "value": "LZ4",
+            "rawvalue": "lz4",
+            "parsed": "lz4",
+            "source": "INHERITED"
+          },
+          "compressratio": {
+            "value": "15.27x",
+            "rawvalue": "15.27x",
+            "parsed": "15.27x",
+            "source": "NONE"
+          },
+          "origin": {
+            "value": "",
+            "rawvalue": "",
+            "parsed": "",
+            "source": "NONE"
+          },
+          "quota": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "refquota": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "reservation": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "refreservation": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "copies": {
+            "value": "1",
+            "rawvalue": "1",
+            "parsed": 1,
+            "source": "DEFAULT"
+          },
+          "snapdir": {
+            "value": "HIDDEN",
+            "rawvalue": "hidden",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "readonly": {
+            "value": "OFF",
+            "rawvalue": "off",
+            "parsed": false,
+            "source": "DEFAULT"
+          },
+          "recordsize": {
+            "value": "128K",
+            "rawvalue": "131072",
+            "parsed": 131072,
+            "source": "DEFAULT"
+          }
+        },
+        {
+          "id": "staging-vol01/.system/samba4",
+          "name": "staging-vol01/.system/samba4",
+          "pool": "staging-vol01",
+          "type": "FILESYSTEM",
+          "mountpoint": "/var/db/system/samba4",
+          "children": [],
+          "deduplication": {
+            "value": "OFF",
+            "rawvalue": "off",
+            "parsed": "off",
+            "source": "DEFAULT"
+          },
+          "aclmode": {
+            "value": "PASSTHROUGH",
+            "rawvalue": "passthrough",
+            "parsed": "passthrough",
+            "source": "INHERITED"
+          },
+          "atime": {
+            "value": "ON",
+            "rawvalue": "on",
+            "parsed": true,
+            "source": "DEFAULT"
+          },
+          "casesensitivity": {
+            "value": "SENSITIVE",
+            "rawvalue": "sensitive",
+            "parsed": "sensitive",
+            "source": "NONE"
+          },
+          "exec": {
+            "value": "ON",
+            "rawvalue": "on",
+            "parsed": true,
+            "source": "DEFAULT"
+          },
+          "sync": {
+            "value": "STANDARD",
+            "rawvalue": "standard",
+            "parsed": "standard",
+            "source": "DEFAULT"
+          },
+          "compression": {
+            "value": "LZ4",
+            "rawvalue": "lz4",
+            "parsed": "lz4",
+            "source": "INHERITED"
+          },
+          "compressratio": {
+            "value": "12.99x",
+            "rawvalue": "12.99x",
+            "parsed": "12.99x",
+            "source": "NONE"
+          },
+          "origin": {
+            "value": "",
+            "rawvalue": "",
+            "parsed": "",
+            "source": "NONE"
+          },
+          "quota": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "refquota": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "reservation": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "refreservation": {
+            "value": null,
+            "rawvalue": "0",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "copies": {
+            "value": "1",
+            "rawvalue": "1",
+            "parsed": 1,
+            "source": "DEFAULT"
+          },
+          "snapdir": {
+            "value": "HIDDEN",
+            "rawvalue": "hidden",
+            "parsed": null,
+            "source": "DEFAULT"
+          },
+          "readonly": {
+            "value": "OFF",
+            "rawvalue": "off",
+            "parsed": false,
+            "source": "DEFAULT"
+          },
+          "recordsize": {
+            "value": "128K",
+            "rawvalue": "131072",
+            "parsed": 131072,
+            "source": "DEFAULT"
+          }
+        }
+      ],
+      "deduplication": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": "off",
+        "source": "DEFAULT"
+      },
+      "aclmode": {
+        "value": "PASSTHROUGH",
+        "rawvalue": "passthrough",
+        "parsed": "passthrough",
+        "source": "INHERITED"
+      },
+      "atime": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "casesensitivity": {
+        "value": "SENSITIVE",
+        "rawvalue": "sensitive",
+        "parsed": "sensitive",
+        "source": "NONE"
+      },
+      "exec": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "sync": {
+        "value": "STANDARD",
+        "rawvalue": "standard",
+        "parsed": "standard",
+        "source": "DEFAULT"
+      },
+      "compression": {
+        "value": "LZ4",
+        "rawvalue": "lz4",
+        "parsed": "lz4",
+        "source": "INHERITED"
+      },
+      "compressratio": {
+        "value": "9.88x",
+        "rawvalue": "9.88x",
+        "parsed": "9.88x",
+        "source": "NONE"
+      },
+      "origin": {
+        "value": "",
+        "rawvalue": "",
+        "parsed": "",
+        "source": "NONE"
+      },
+      "quota": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "refquota": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "reservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "refreservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "copies": {
+        "value": "1",
+        "rawvalue": "1",
+        "parsed": 1,
+        "source": "DEFAULT"
+      },
+      "snapdir": {
+        "value": "HIDDEN",
+        "rawvalue": "hidden",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "readonly": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": false,
+        "source": "DEFAULT"
+      },
+      "recordsize": {
+        "value": "128K",
+        "rawvalue": "131072",
+        "parsed": 131072,
+        "source": "DEFAULT"
+      }
+    },
+    {
+      "id": "staging-vol01/phw802urmrnj",
+      "name": "staging-vol01/phw802urmrnj",
+      "pool": "staging-vol01",
+      "type": "FILESYSTEM",
+      "mountpoint": "/mnt/staging-vol01/phw802urmrnj",
+      "children": [],
+      "deduplication": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": "off",
+        "source": "DEFAULT"
+      },
+      "aclmode": {
+        "value": "PASSTHROUGH",
+        "rawvalue": "passthrough",
+        "parsed": "passthrough",
+        "source": "LOCAL"
+      },
+      "atime": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "casesensitivity": {
+        "value": "SENSITIVE",
+        "rawvalue": "sensitive",
+        "parsed": "sensitive",
+        "source": "NONE"
+      },
+      "exec": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "sync": {
+        "value": "STANDARD",
+        "rawvalue": "standard",
+        "parsed": "standard",
+        "source": "DEFAULT"
+      },
+      "compression": {
+        "value": "LZ4",
+        "rawvalue": "lz4",
+        "parsed": "lz4",
+        "source": "INHERITED"
+      },
+      "compressratio": {
+        "value": "1.02x",
+        "rawvalue": "1.02x",
+        "parsed": "1.02x",
+        "source": "NONE"
+      },
+      "origin": {
+        "value": "",
+        "rawvalue": "",
+        "parsed": "",
+        "source": "NONE"
+      },
+      "quota": {
+        "value": "1T",
+        "rawvalue": "1099511627776",
+        "parsed": 1099511627776,
+        "source": "LOCAL"
+      },
+      "refquota": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "reservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "refreservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "copies": {
+        "value": "1",
+        "rawvalue": "1",
+        "parsed": 1,
+        "source": "DEFAULT"
+      },
+      "snapdir": {
+        "value": "HIDDEN",
+        "rawvalue": "hidden",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "readonly": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": false,
+        "source": "DEFAULT"
+      },
+      "recordsize": {
+        "value": "128K",
+        "rawvalue": "131072",
+        "parsed": 131072,
+        "source": "DEFAULT"
+      }
+    },
+    {
+      "id": "staging-vol01/6qzx5y2pqvvp",
+      "name": "staging-vol01/6qzx5y2pqvvp",
+      "pool": "staging-vol01",
+      "type": "FILESYSTEM",
+      "mountpoint": "/mnt/staging-vol01/6qzx5y2pqvvp",
+      "children": [],
+      "deduplication": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": "off",
+        "source": "DEFAULT"
+      },
+      "aclmode": {
+        "value": "PASSTHROUGH",
+        "rawvalue": "passthrough",
+        "parsed": "passthrough",
+        "source": "LOCAL"
+      },
+      "atime": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "casesensitivity": {
+        "value": "SENSITIVE",
+        "rawvalue": "sensitive",
+        "parsed": "sensitive",
+        "source": "NONE"
+      },
+      "exec": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "sync": {
+        "value": "STANDARD",
+        "rawvalue": "standard",
+        "parsed": "standard",
+        "source": "DEFAULT"
+      },
+      "compression": {
+        "value": "LZ4",
+        "rawvalue": "lz4",
+        "parsed": "lz4",
+        "source": "INHERITED"
+      },
+      "compressratio": {
+        "value": "1.01x",
+        "rawvalue": "1.01x",
+        "parsed": "1.01x",
+        "source": "NONE"
+      },
+      "origin": {
+        "value": "",
+        "rawvalue": "",
+        "parsed": "",
+        "source": "NONE"
+      },
+      "quota": {
+        "value": "1T",
+        "rawvalue": "1099511627776",
+        "parsed": 1099511627776,
+        "source": "LOCAL"
+      },
+      "refquota": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "reservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "refreservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "copies": {
+        "value": "1",
+        "rawvalue": "1",
+        "parsed": 1,
+        "source": "DEFAULT"
+      },
+      "snapdir": {
+        "value": "HIDDEN",
+        "rawvalue": "hidden",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "readonly": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": false,
+        "source": "DEFAULT"
+      },
+      "recordsize": {
+        "value": "128K",
+        "rawvalue": "131072",
+        "parsed": 131072,
+        "source": "DEFAULT"
+      }
+    },
+    {
+      "id": "staging-vol01/.warden-template-standard-11.0-x64",
+      "name": "staging-vol01/.warden-template-standard-11.0-x64",
+      "pool": "staging-vol01",
+      "type": "FILESYSTEM",
+      "mountpoint": "/mnt/staging-vol01/.warden-template-standard-11.0-x64",
+      "children": [],
+      "deduplication": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": "off",
+        "source": "DEFAULT"
+      },
+      "aclmode": {
+        "value": "PASSTHROUGH",
+        "rawvalue": "passthrough",
+        "parsed": "passthrough",
+        "source": "INHERITED"
+      },
+      "atime": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "casesensitivity": {
+        "value": "SENSITIVE",
+        "rawvalue": "sensitive",
+        "parsed": "sensitive",
+        "source": "NONE"
+      },
+      "exec": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "sync": {
+        "value": "STANDARD",
+        "rawvalue": "standard",
+        "parsed": "standard",
+        "source": "DEFAULT"
+      },
+      "compression": {
+        "value": "LZ4",
+        "rawvalue": "lz4",
+        "parsed": "lz4",
+        "source": "INHERITED"
+      },
+      "compressratio": {
+        "value": "2.22x",
+        "rawvalue": "2.22x",
+        "parsed": "2.22x",
+        "source": "NONE"
+      },
+      "origin": {
+        "value": "",
+        "rawvalue": "",
+        "parsed": "",
+        "source": "NONE"
+      },
+      "quota": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "refquota": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "reservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "refreservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "copies": {
+        "value": "1",
+        "rawvalue": "1",
+        "parsed": 1,
+        "source": "DEFAULT"
+      },
+      "snapdir": {
+        "value": "HIDDEN",
+        "rawvalue": "hidden",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "readonly": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": false,
+        "source": "DEFAULT"
+      },
+      "recordsize": {
+        "value": "128K",
+        "rawvalue": "131072",
+        "parsed": 131072,
+        "source": "DEFAULT"
+      }
+    },
+    {
+      "id": "staging-vol01/mmwrzokmq10f",
+      "name": "staging-vol01/mmwrzokmq10f",
+      "pool": "staging-vol01",
+      "type": "FILESYSTEM",
+      "mountpoint": "/mnt/staging-vol01/mmwrzokmq10f",
+      "children": [],
+      "deduplication": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": "off",
+        "source": "DEFAULT"
+      },
+      "aclmode": {
+        "value": "PASSTHROUGH",
+        "rawvalue": "passthrough",
+        "parsed": "passthrough",
+        "source": "LOCAL"
+      },
+      "atime": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "casesensitivity": {
+        "value": "SENSITIVE",
+        "rawvalue": "sensitive",
+        "parsed": "sensitive",
+        "source": "NONE"
+      },
+      "exec": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "sync": {
+        "value": "STANDARD",
+        "rawvalue": "standard",
+        "parsed": "standard",
+        "source": "DEFAULT"
+      },
+      "compression": {
+        "value": "LZ4",
+        "rawvalue": "lz4",
+        "parsed": "lz4",
+        "source": "INHERITED"
+      },
+      "compressratio": {
+        "value": "1.02x",
+        "rawvalue": "1.02x",
+        "parsed": "1.02x",
+        "source": "NONE"
+      },
+      "origin": {
+        "value": "",
+        "rawvalue": "",
+        "parsed": "",
+        "source": "NONE"
+      },
+      "quota": {
+        "value": "1T",
+        "rawvalue": "1099511627776",
+        "parsed": 1099511627776,
+        "source": "LOCAL"
+      },
+      "refquota": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "reservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "refreservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "copies": {
+        "value": "1",
+        "rawvalue": "1",
+        "parsed": 1,
+        "source": "DEFAULT"
+      },
+      "snapdir": {
+        "value": "HIDDEN",
+        "rawvalue": "hidden",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "readonly": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": false,
+        "source": "DEFAULT"
+      },
+      "recordsize": {
+        "value": "128K",
+        "rawvalue": "131072",
+        "parsed": 131072,
+        "source": "DEFAULT"
+      }
+    },
+    {
+      "id": "staging-vol01/kk7zjhnmwdb1",
+      "name": "staging-vol01/kk7zjhnmwdb1",
+      "pool": "staging-vol01",
+      "type": "FILESYSTEM",
+      "mountpoint": "/mnt/staging-vol01/kk7zjhnmwdb1",
+      "children": [],
+      "deduplication": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": "off",
+        "source": "DEFAULT"
+      },
+      "aclmode": {
+        "value": "PASSTHROUGH",
+        "rawvalue": "passthrough",
+        "parsed": "passthrough",
+        "source": "LOCAL"
+      },
+      "atime": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "casesensitivity": {
+        "value": "SENSITIVE",
+        "rawvalue": "sensitive",
+        "parsed": "sensitive",
+        "source": "NONE"
+      },
+      "exec": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "sync": {
+        "value": "STANDARD",
+        "rawvalue": "standard",
+        "parsed": "standard",
+        "source": "DEFAULT"
+      },
+      "compression": {
+        "value": "LZ4",
+        "rawvalue": "lz4",
+        "parsed": "lz4",
+        "source": "INHERITED"
+      },
+      "compressratio": {
+        "value": "1.01x",
+        "rawvalue": "1.01x",
+        "parsed": "1.01x",
+        "source": "NONE"
+      },
+      "origin": {
+        "value": "",
+        "rawvalue": "",
+        "parsed": "",
+        "source": "NONE"
+      },
+      "quota": {
+        "value": "1T",
+        "rawvalue": "1099511627776",
+        "parsed": 1099511627776,
+        "source": "LOCAL"
+      },
+      "refquota": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "reservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "refreservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "copies": {
+        "value": "1",
+        "rawvalue": "1",
+        "parsed": 1,
+        "source": "DEFAULT"
+      },
+      "snapdir": {
+        "value": "HIDDEN",
+        "rawvalue": "hidden",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "readonly": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": false,
+        "source": "DEFAULT"
+      },
+      "recordsize": {
+        "value": "128K",
+        "rawvalue": "131072",
+        "parsed": 131072,
+        "source": "DEFAULT"
+      }
+    },
+    {
+      "id": "staging-vol01/asdfasdfasdf",
+      "name": "staging-vol01/asdfasdfasdf",
+      "pool": "staging-vol01",
+      "type": "VOLUME",
+      "mountpoint": null,
+      "children": [],
+      "comments": {
+        "value": "",
+        "rawvalue": "",
+        "parsed": "",
+        "source": "LOCAL"
+      },
+      "deduplication": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": "off",
+        "source": "DEFAULT"
+      },
+      "sync": {
+        "value": "STANDARD",
+        "rawvalue": "standard",
+        "parsed": "standard",
+        "source": "DEFAULT"
+      },
+      "compression": {
+        "value": "LZ4",
+        "rawvalue": "lz4",
+        "parsed": "lz4",
+        "source": "INHERITED"
+      },
+      "compressratio": {
+        "value": "1.00x",
+        "rawvalue": "1.00x",
+        "parsed": "1.00x",
+        "source": "NONE"
+      },
+      "origin": {
+        "value": "",
+        "rawvalue": "",
+        "parsed": "",
+        "source": "NONE"
+      },
+      "reservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "refreservation": {
+        "value": "1.03G",
+        "rawvalue": "1109393408",
+        "parsed": 1109393408,
+        "source": "LOCAL"
+      },
+      "copies": {
+        "value": "1",
+        "rawvalue": "1",
+        "parsed": 1,
+        "source": "DEFAULT"
+      },
+      "readonly": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": false,
+        "source": "DEFAULT"
+      },
+      "volsize": {
+        "value": "1G",
+        "rawvalue": "1073741824",
+        "parsed": 1073741824,
+        "source": "LOCAL"
+      },
+      "volblocksize": {
+        "value": "8K",
+        "rawvalue": "8192",
+        "parsed": 8192,
+        "source": "DEFAULT"
+      }
+    },
+    {
+      "id": "staging-vol01/s2vzaxgxanlv",
+      "name": "staging-vol01/s2vzaxgxanlv",
+      "pool": "staging-vol01",
+      "type": "FILESYSTEM",
+      "mountpoint": "/mnt/staging-vol01/s2vzaxgxanlv",
+      "children": [],
+      "deduplication": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": "off",
+        "source": "DEFAULT"
+      },
+      "aclmode": {
+        "value": "PASSTHROUGH",
+        "rawvalue": "passthrough",
+        "parsed": "passthrough",
+        "source": "LOCAL"
+      },
+      "atime": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "casesensitivity": {
+        "value": "SENSITIVE",
+        "rawvalue": "sensitive",
+        "parsed": "sensitive",
+        "source": "NONE"
+      },
+      "exec": {
+        "value": "ON",
+        "rawvalue": "on",
+        "parsed": true,
+        "source": "DEFAULT"
+      },
+      "sync": {
+        "value": "STANDARD",
+        "rawvalue": "standard",
+        "parsed": "standard",
+        "source": "DEFAULT"
+      },
+      "compression": {
+        "value": "LZ4",
+        "rawvalue": "lz4",
+        "parsed": "lz4",
+        "source": "INHERITED"
+      },
+      "compressratio": {
+        "value": "1.00x",
+        "rawvalue": "1.00x",
+        "parsed": "1.00x",
+        "source": "NONE"
+      },
+      "origin": {
+        "value": "",
+        "rawvalue": "",
+        "parsed": "",
+        "source": "NONE"
+      },
+      "quota": {
+        "value": "1T",
+        "rawvalue": "1099511627776",
+        "parsed": 1099511627776,
+        "source": "LOCAL"
+      },
+      "refquota": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "reservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "refreservation": {
+        "value": null,
+        "rawvalue": "0",
+        "parsed": null,
+        "source": "LOCAL"
+      },
+      "copies": {
+        "value": "1",
+        "rawvalue": "1",
+        "parsed": 1,
+        "source": "DEFAULT"
+      },
+      "snapdir": {
+        "value": "HIDDEN",
+        "rawvalue": "hidden",
+        "parsed": null,
+        "source": "DEFAULT"
+      },
+      "readonly": {
+        "value": "OFF",
+        "rawvalue": "off",
+        "parsed": false,
+        "source": "DEFAULT"
+      },
+      "recordsize": {
+        "value": "128K",
+        "rawvalue": "131072",
+        "parsed": 131072,
+        "source": "DEFAULT"
+      }
+    }
+  ],
+  "deduplication": {
+    "value": "OFF",
+    "rawvalue": "off",
+    "parsed": "off",
+    "source": "DEFAULT"
+  },
+  "aclmode": {
+    "value": "PASSTHROUGH",
+    "rawvalue": "passthrough",
+    "parsed": "passthrough",
+    "source": "LOCAL"
+  },
+  "atime": {
+    "value": "ON",
+    "rawvalue": "on",
+    "parsed": true,
+    "source": "DEFAULT"
+  },
+  "casesensitivity": {
+    "value": "SENSITIVE",
+    "rawvalue": "sensitive",
+    "parsed": "sensitive",
+    "source": "NONE"
+  },
+  "exec": {
+    "value": "ON",
+    "rawvalue": "on",
+    "parsed": true,
+    "source": "DEFAULT"
+  },
+  "sync": {
+    "value": "STANDARD",
+    "rawvalue": "standard",
+    "parsed": "standard",
+    "source": "DEFAULT"
+  },
+  "compression": {
+    "value": "LZ4",
+    "rawvalue": "lz4",
+    "parsed": "lz4",
+    "source": "LOCAL"
+  },
+  "compressratio": {
+    "value": "3.39x",
+    "rawvalue": "3.39x",
+    "parsed": "3.39x",
+    "source": "NONE"
+  },
+  "origin": {
+    "value": "",
+    "rawvalue": "",
+    "parsed": "",
+    "source": "NONE"
+  },
+  "quota": {
+    "value": null,
+    "rawvalue": "0",
+    "parsed": null,
+    "source": "DEFAULT"
+  },
+  "refquota": {
+    "value": null,
+    "rawvalue": "0",
+    "parsed": null,
+    "source": "DEFAULT"
+  },
+  "reservation": {
+    "value": null,
+    "rawvalue": "0",
+    "parsed": null,
+    "source": "DEFAULT"
+  },
+  "refreservation": {
+    "value": null,
+    "rawvalue": "0",
+    "parsed": null,
+    "source": "DEFAULT"
+  },
+  "copies": {
+    "value": "1",
+    "rawvalue": "1",
+    "parsed": 1,
+    "source": "DEFAULT"
+  },
+  "snapdir": {
+    "value": "HIDDEN",
+    "rawvalue": "hidden",
+    "parsed": null,
+    "source": "DEFAULT"
+  },
+  "readonly": {
+    "value": "OFF",
+    "rawvalue": "off",
+    "parsed": false,
+    "source": "DEFAULT"
+  },
+  "recordsize": {
+    "value": "128K",
+    "rawvalue": "131072",
+    "parsed": 131072,
+    "source": "DEFAULT"
+  }
+}

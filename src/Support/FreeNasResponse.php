@@ -3,6 +3,7 @@
 namespace PCextreme\FreeNAS\Support;
 
 use PCextreme\FreeNAS\Exceptions\FreeNasClientException;
+use PCextreme\FreeNAS\Exceptions\UnexpectedValueException;
 
 class FreeNasResponse
 {
@@ -29,7 +30,7 @@ class FreeNasResponse
         $json = json_decode($this->response, true);
 
         if (json_last_error() || $json === false) {
-            throw new FreeNasClientException("Could not parse JSON reponse body:\n" . $this->response);
+            throw new UnexpectedValueException("Could not parse JSON reponse body:\n" . $this->response);
         }
 
         return $json;

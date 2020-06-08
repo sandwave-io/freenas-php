@@ -11,7 +11,7 @@ class CreateUserTest extends TestCase
 {
     use MockClientTrait;
 
-    public function test_user_endpoint()
+    public function test_user_endpoint(): void
     {
         $client = $this->getMockedClientWithResponse(200, '123', function (RequestInterface $request) {
             $this->assertSame('POST', strtoupper($request->getMethod()));
@@ -24,9 +24,9 @@ class CreateUserTest extends TestCase
         $this->assertIsInt($userId);
     }
 
-    public function test_user_endpoint_422()
+    public function test_user_endpoint_422(): void
     {
-        $response = file_get_contents(__DIR__ . '/json/user_create_validation_error.json');
+        $response = (string) file_get_contents(__DIR__ . '/json/user_create_validation_error.json');
         $client = $this->getMockedClientWithResponse(422, $response, function (RequestInterface $request) {
             $this->assertSame('POST', strtoupper($request->getMethod()));
             $this->assertSame('user', $request->getUri()->getPath());
