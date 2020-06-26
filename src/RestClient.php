@@ -5,6 +5,8 @@ namespace PCextreme\FreeNAS;
 use PCextreme\FreeNAS\Domain\Dataset;
 use PCextreme\FreeNAS\Domain\DatasetCollection;
 use PCextreme\FreeNAS\Domain\Pool;
+use PCextreme\FreeNAS\Domain\Task;
+use PCextreme\FreeNAS\Domain\TaskCollection;
 use PCextreme\FreeNAS\Domain\User;
 use PCextreme\FreeNAS\Exceptions\NotFoundException;
 use PCextreme\FreeNAS\Support\BasicAuthClient;
@@ -50,10 +52,15 @@ final class RestClient
         return Dataset::fromArray($response);
     }
 
+    public function getDatasets(string $volume): DatasetCollection
+    {
+        return DatasetCollection::fromArray($this->client->get("pool/dataset/id/{$volume}")->json());
+    }
+
     public function getDataset(string $volume, string $datasetId): Dataset
     {
-        $collection = DatasetCollection::fromArray($this->client->get("pool/dataset/id/{$volume}")->json());
-        return $collection->getDataset("{$volume}/{$datasetId}");
+        $path = urlencode("{$volume}/{$datasetId}");
+        return Dataset::fromArray($this->client->get("pool/dataset/id/{$path}")->json());
     }
 
 
@@ -92,5 +99,25 @@ final class RestClient
     public function deleteUser(int $userId): void
     {
         $this->client->delete("user/id/{$userId}");
+    }
+
+    public function getSnapshotTasks(): TaskCollection
+    {
+        return TaskCollection::fromArray($this->client->get("pool/snapshottask")->json());
+    }
+
+    public function getSnapshotTask(int $taskId): Task
+    {
+        return Task::fromArray($this->client->get("pool/snapshottask/id/{$taskId}")->json());
+    }
+
+    public function createSnapshotTask(string $volume, string $datasetId): void
+    {
+        $path = urlencode("{$volume}/{$datasetId}");
+        $response = $this->client->post('user', [
+            'dataset' => $path,
+            'recursive' => true,
+            'naming_schema' => '%Y_%m_%d_%H_%M'
+        ], [], 200)->text();
     }
 }

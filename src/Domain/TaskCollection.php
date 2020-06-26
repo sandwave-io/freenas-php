@@ -7,33 +7,27 @@ use ArrayIterator;
 use Countable;
 use IteratorAggregate;
 
-class DatasetCollection implements ArrayAccess, IteratorAggregate, Countable
+class TaskCollection implements ArrayAccess, IteratorAggregate, Countable
 {
-    /** @var array<Dataset> */
+    /** @var array<Task> */
     private $collection;
 
-    /** @param array<Dataset> $collection */
+    /** @param array<Task> $collection */
     public function __construct(array $collection)
     {
         $this->collection = $collection;
     }
 
-    public static function fromArray(array $data): DatasetCollection
+    public static function fromArray(array $data): TaskCollection
     {
-        $collection = array_filter(
-            $data['children'] ?? [],
-            function ($dataset) {
-                return $dataset['type'] === Dataset::TYPE_FILESYSTEM;
-            }
-        );
         $collection = array_map(
             function (array $dataset) {
-                return Dataset::fromArray($dataset);
+                return Task::fromArray($dataset);
             },
-            $collection
+            $data
         );
 
-        return new DatasetCollection($collection);
+        return new TaskCollection($collection);
     }
 
     /**
@@ -47,14 +41,14 @@ class DatasetCollection implements ArrayAccess, IteratorAggregate, Countable
     /**
      * @param int $offset
      */
-    public function offsetGet($offset): ?Dataset
+    public function offsetGet($offset): ?Task
     {
         return isset($this->collection[$offset]) ? $this->collection[$offset] : null;
     }
 
     /**
      * @param int|null $offset
-     * @param Dataset   $value
+     * @param Task   $value
      */
     public function offsetSet($offset, $value): void
     {
@@ -74,7 +68,7 @@ class DatasetCollection implements ArrayAccess, IteratorAggregate, Countable
     }
 
     /**
-     * @return ArrayIterator<Dataset>
+     * @return ArrayIterator<Task>
      */
     public function getIterator(): ArrayIterator
     {

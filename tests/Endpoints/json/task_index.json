@@ -1,0 +1,198 @@
+[
+  {
+    "id": 8,
+    "dataset": "staging-vol01/s2vzaxgxanlv",
+    "recursive": false,
+    "exclude": [],
+    "lifetime_value": 2,
+    "lifetime_unit": "DAY",
+    "naming_schema": "auto-%Y%m%d.%H%M-2d",
+    "allow_empty": true,
+    "enabled": true,
+    "schedule": {
+      "minute": "0",
+      "hour": "*/1",
+      "dom": "*",
+      "month": "*",
+      "dow": "1,2,3,4,5",
+      "begin": "09:00",
+      "end": "18:00"
+    },
+    "legacy": false,
+    "vmware_sync": false,
+    "state": {
+      "state": "FINISHED",
+      "datetime": {
+        "$date": 1593046800358
+      }
+    }
+  },
+  {
+    "id": 9,
+    "dataset": "staging-vol01/s2vzaxgxanlv",
+    "recursive": false,
+    "exclude": [],
+    "lifetime_value": 2,
+    "lifetime_unit": "DAY",
+    "naming_schema": "auto-%Y%m%d.%H%M-2d",
+    "allow_empty": true,
+    "enabled": true,
+    "schedule": {
+      "minute": "0",
+      "hour": "*/1",
+      "dom": "*",
+      "month": "*",
+      "dow": "1,2,3,4,5",
+      "begin": "09:00",
+      "end": "18:00"
+    },
+    "legacy": false,
+    "vmware_sync": false,
+    "state": {
+      "state": "FINISHED",
+      "datetime": {
+        "$date": 1593046800360
+      }
+    }
+  },
+  {
+    "id": 10,
+    "dataset": "staging-vol01/s2vzaxgxanlv",
+    "recursive": false,
+    "exclude": [],
+    "lifetime_value": 2,
+    "lifetime_unit": "WEEK",
+    "naming_schema": "auto-%Y%m%d.%H%M-2w",
+    "allow_empty": true,
+    "enabled": true,
+    "schedule": {
+      "minute": "0",
+      "hour": "9",
+      "dom": "*",
+      "month": "*",
+      "dow": "1,2,3,4,5",
+      "begin": "09:00",
+      "end": "18:00"
+    },
+    "legacy": false,
+    "vmware_sync": false,
+    "state": {
+      "state": "FINISHED",
+      "datetime": {
+        "$date": 1593014400767
+      }
+    }
+  },
+  {
+    "id": 11,
+    "dataset": "staging-vol01/s2vzaxgxanlv",
+    "recursive": false,
+    "exclude": [],
+    "lifetime_value": 2,
+    "lifetime_unit": "MONTH",
+    "naming_schema": "auto-%Y%m%d.%H%M-2m",
+    "allow_empty": true,
+    "enabled": true,
+    "schedule": {
+      "minute": "0",
+      "hour": "9",
+      "dom": "*",
+      "month": "*",
+      "dow": "1",
+      "begin": "09:00",
+      "end": "18:00"
+    },
+    "legacy": false,
+    "vmware_sync": false,
+    "state": {
+      "state": "FINISHED",
+      "datetime": {
+        "$date": 1592841600842
+      }
+    }
+  },
+  {
+    "id": 12,
+    "dataset": "staging-vol01/scdqkigwtp5f",
+    "recursive": false,
+    "exclude": [],
+    "lifetime_value": 2,
+    "lifetime_unit": "DAY",
+    "naming_schema": "auto-%Y%m%d.%H%M-2d",
+    "allow_empty": true,
+    "enabled": true,
+    "schedule": {
+      "minute": "0",
+      "hour": "*/1",
+      "dom": "*",
+      "month": "*",
+      "dow": "1,2,3,4,5",
+      "begin": "09:00",
+      "end": "18:00"
+    },
+    "legacy": false,
+    "vmware_sync": false,
+    "state": {
+      "state": "FINISHED",
+      "datetime": {
+        "$date": 1593046800588
+      }
+    }
+  },
+  {
+    "id": 13,
+    "dataset": "staging-vol01/scdqkigwtp5f",
+    "recursive": false,
+    "exclude": [],
+    "lifetime_value": 2,
+    "lifetime_unit": "WEEK",
+    "naming_schema": "auto-%Y%m%d.%H%M-2w",
+    "allow_empty": true,
+    "enabled": true,
+    "schedule": {
+      "minute": "0",
+      "hour": "9",
+      "dom": "*",
+      "month": "*",
+      "dow": "1,2,3,4,5",
+      "begin": "09:00",
+      "end": "18:00"
+    },
+    "legacy": false,
+    "vmware_sync": false,
+    "state": {
+      "state": "FINISHED",
+      "datetime": {
+        "$date": 1593014400966
+      }
+    }
+  },
+  {
+    "id": 14,
+    "dataset": "staging-vol01/scdqkigwtp5f",
+    "recursive": false,
+    "exclude": [],
+    "lifetime_value": 2,
+    "lifetime_unit": "MONTH",
+    "naming_schema": "auto-%Y%m%d.%H%M-2m",
+    "allow_empty": true,
+    "enabled": true,
+    "schedule": {
+      "minute": "0",
+      "hour": "9",
+      "dom": "*",
+      "month": "*",
+      "dow": "1",
+      "begin": "09:00",
+      "end": "18:00"
+    },
+    "legacy": false,
+    "vmware_sync": false,
+    "state": {
+      "state": "FINISHED",
+      "datetime": {
+        "$date": 1592841601068
+      }
+    }
+  }
+]

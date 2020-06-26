@@ -4,6 +4,7 @@ namespace PCextreme\FreeNAS\Support;
 
 use GuzzleHttp\Client;
 use PCextreme\FreeNAS\Exceptions\FreeNasClientException;
+use PCextreme\FreeNAS\Exceptions\NotFoundException;
 use Psr\Http\Message\ResponseInterface;
 
 class BasicAuthClient
@@ -72,11 +73,13 @@ class BasicAuthClient
 
     private function handleResponse(ResponseInterface $response, int $expectedResponse): FreeNasResponse
     {
-        if ($response->getStatusCode() !== $expectedResponse) {
+        if ($response->getStatusCode() === $expectedResponse) {
+            return FreeNasResponse::fromString((string) $response->getBody());
+        } elseif ($response->getStatusCode() >= 400 && $response->getStatusCode() < 500) {
+            throw new NotFoundException("Not found.");
+        } else {
             throw new FreeNasClientException("Unexpected response (got {$response->getStatusCode()}, expected {$expectedResponse}). Body: " . $response->getBody());
         }
-
-        return FreeNasResponse::fromString((string) $response->getBody());
     }
 
     private function buildQuery(array $parameters): string

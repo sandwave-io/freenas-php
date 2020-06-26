@@ -1,0 +1,28 @@
+{
+  "id": 8,
+  "dataset": "staging-vol01/s2vzaxgxanlv",
+  "recursive": false,
+  "exclude": [],
+  "lifetime_value": 2,
+  "lifetime_unit": "DAY",
+  "naming_schema": "auto-%Y%m%d.%H%M-2d",
+  "allow_empty": true,
+  "enabled": true,
+  "schedule": {
+    "minute": "0",
+    "hour": "*/1",
+    "dom": "*",
+    "month": "*",
+    "dow": "1,2,3,4,5",
+    "begin": "09:00",
+    "end": "18:00"
+  },
+  "legacy": false,
+  "vmware_sync": false,
+  "state": {
+    "state": "FINISHED",
+    "datetime": {
+      "$date": 1593046800358
+    }
+  }
+}
