@@ -9,6 +9,7 @@ use PCextreme\FreeNAS\Tests\Helpers\MockClientTrait;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
 
+/** @covers \PCextreme\FreeNAS\RestClient::getPool */
 class IndexPoolTest extends TestCase
 {
     use MockClientTrait;

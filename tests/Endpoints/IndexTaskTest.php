@@ -2,15 +2,16 @@
 
 namespace PCextreme\FreeNAS\Tests\Endpoints;
 
-use PCextreme\FreeNAS\Domain\Dataset;
 use PCextreme\FreeNAS\Domain\LifetimeUnit;
 use PCextreme\FreeNAS\Domain\Task;
+use PCextreme\FreeNAS\Domain\TaskCollection;
 use PCextreme\FreeNAS\Exceptions\FreeNasClientException;
 use PCextreme\FreeNAS\Exceptions\NotFoundException;
 use PCextreme\FreeNAS\Tests\Helpers\MockClientTrait;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
 
+/** @covers \PCextreme\FreeNAS\RestClient::getSnapshotTasks */
 class IndexTaskTest extends TestCase
 {
     use MockClientTrait;
@@ -26,8 +27,9 @@ class IndexTaskTest extends TestCase
         });
 
         $tasks = $client->getSnapshotTasks();
+        $this->assertInstanceOf(TaskCollection::class, $tasks);
         $task = $tasks[0];
-        // TODO: IMplement array access on collection.
+
         $this->assertInstanceOf(Task::class, $task);
 
         $this->assertSame(8, $task->getId());

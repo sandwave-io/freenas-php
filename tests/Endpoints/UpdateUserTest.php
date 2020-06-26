@@ -8,6 +8,7 @@ use PCextreme\FreeNAS\Tests\Helpers\MockClientTrait;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
 
+/** @covers \PCextreme\FreeNAS\RestClient::updateUserPassword */
 class UpdateUserTest extends TestCase
 {
     use MockClientTrait;

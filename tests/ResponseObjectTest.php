@@ -8,6 +8,7 @@ use PCextreme\FreeNAS\Exceptions\UnexpectedValueException;
 use PCextreme\FreeNAS\Support\FreeNasResponse;
 use PHPUnit\Framework\TestCase;
 
+/** @covers \PCextreme\FreeNAS\Support\FreeNasResponse */
 class ResponseObjectTest extends TestCase
 {
     public function test_get_text()

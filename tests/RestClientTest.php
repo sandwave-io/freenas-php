@@ -3,8 +3,10 @@
 namespace PCextreme\FreeNAS\Tests;
 
 use PCextreme\FreeNAS\RestClient;
+use PCextreme\FreeNAS\Support\BasicAuthClient;
 use PHPUnit\Framework\TestCase;
 
+/** @covers \PCextreme\FreeNAS\RestClient */
 class RestClientTest extends TestCase
 {
     public function test_construct(): void
@@ -14,6 +16,13 @@ class RestClientTest extends TestCase
             'root',
             'adminadmin'
         );
+
+        $client->setClient(new BasicAuthClient(
+            'https://example.com/api/v2/',
+            'root',
+            'adminadmin'
+        ));
+
         $this->assertInstanceOf(RestClient::class, $client);
     }
 }

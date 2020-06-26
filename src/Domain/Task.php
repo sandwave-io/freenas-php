@@ -21,20 +21,23 @@ class Task
     /** @var bool */
     private $isRecursive;
 
-
+    /** @var Schedule */
+    private $schedule;
 
     public function __construct(
         int $id,
         string $dataset,
         int $lifetimeValue,
         LifetimeUnit $lifetimeUnit,
-        bool $isRecursive
+        bool $isRecursive,
+        Schedule $schedule
     ) {
         $this->id = $id;
         $this->dataset = $dataset;
         $this->lifetimeValue = $lifetimeValue;
         $this->lifetimeUnit = $lifetimeUnit;
         $this->isRecursive = $isRecursive;
+        $this->schedule = $schedule;
     }
 
     public static function fromArray(array $data): Task
@@ -44,7 +47,8 @@ class Task
             $data['dataset'],
             $data['lifetime_value'],
             LifetimeUnit::fromString($data['lifetime_unit']),
-            $data['recursive']
+            $data['recursive'],
+            Schedule::fromArray($data['schedule'])
         );
     }
 

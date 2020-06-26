@@ -1,0 +1,8 @@
+{
+  "pool_dataset_create.name": [
+    {
+      "message": "You need a full name, e.g. pool/newdataset",
+      "errno": 22
+    }
+  ]
+}

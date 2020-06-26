@@ -4,7 +4,9 @@ namespace PCextreme\FreeNAS;
 
 use PCextreme\FreeNAS\Domain\Dataset;
 use PCextreme\FreeNAS\Domain\DatasetCollection;
+use PCextreme\FreeNAS\Domain\LifetimeUnit;
 use PCextreme\FreeNAS\Domain\Pool;
+use PCextreme\FreeNAS\Domain\Schedule;
 use PCextreme\FreeNAS\Domain\Task;
 use PCextreme\FreeNAS\Domain\TaskCollection;
 use PCextreme\FreeNAS\Domain\User;
@@ -111,13 +113,18 @@ final class RestClient
         return Task::fromArray($this->client->get("pool/snapshottask/id/{$taskId}")->json());
     }
 
-    public function createSnapshotTask(string $volume, string $datasetId): void
+    public function createSnapshotTask(string $volume, string $datasetId, Schedule $schedule, int $lifetimeValue, LifetimeUnit $lifetimeUnit): Task
     {
         $path = urlencode("{$volume}/{$datasetId}");
         $response = $this->client->post('user', [
             'dataset' => $path,
-            'recursive' => true,
-            'naming_schema' => '%Y_%m_%d_%H_%M'
-        ], [], 200)->text();
+            'recursive' => false,
+            'naming_schema' => '%Y_%m_%d_%H_%M',
+            'lifetime_value' => $lifetimeValue,
+            'lifetime_unit' => (string) $lifetimeUnit,
+            'schedule' => $schedule->toArray(),
+        ], [], 200);
+
+        return Task::fromArray($response->json());
     }
 }

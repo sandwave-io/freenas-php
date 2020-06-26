@@ -2,40 +2,42 @@
 
 namespace PCextreme\FreeNAS\Tests\Endpoints;
 
+use PCextreme\FreeNAS\Domain\Dataset;
 use PCextreme\FreeNAS\Exceptions\FreeNasClientException;
 use PCextreme\FreeNAS\Tests\Helpers\MockClientTrait;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
 
-/** @covers \PCextreme\FreeNAS\RestClient::createUser */
-class CreateUserTest extends TestCase
+/** @covers \PCextreme\FreeNAS\RestClient::createDataset */
+class CreateDatasetTest extends TestCase
 {
     use MockClientTrait;
 
     public function test_user_endpoint(): void
     {
-        $client = $this->getMockedClientWithResponse(200, '123', function (RequestInterface $request) {
+        $response = (string) file_get_contents(__DIR__ . '/json/dataset_show.json');
+        $client = $this->getMockedClientWithResponse(200, $response, function (RequestInterface $request) {
             $this->assertSame('POST', strtoupper($request->getMethod()));
-            $this->assertSame('user', $request->getUri()->getPath());
+            $this->assertSame('pool/dataset', $request->getUri()->getPath());
             $this->assertSame('', $request->getUri()->getQuery());
             $this->assertNotEmpty($request->getHeader('Authorization'));
         });
 
-        $userId = $client->createUser(123001, 'asdfasdf', '/mnt/staging-vol01/asdfasdf', 'secret');
-        $this->assertIsInt($userId);
+        $task = $client->createDataset( 'staging-vol01', 'asdfasdf', 1024 ** 3 /* 1MB */);
+        $this->assertInstanceOf(Dataset::class, $task);
     }
 
     public function test_user_endpoint_422(): void
     {
-        $response = (string) file_get_contents(__DIR__ . '/json/user_create_validation_error.json');
+        $response = (string) file_get_contents(__DIR__ . '/json/dataset_create_validation_error.json');
         $client = $this->getMockedClientWithResponse(422, $response, function (RequestInterface $request) {
             $this->assertSame('POST', strtoupper($request->getMethod()));
-            $this->assertSame('user', $request->getUri()->getPath());
+            $this->assertSame('pool/dataset', $request->getUri()->getPath());
             $this->assertSame('', $request->getUri()->getQuery());
             $this->assertNotEmpty($request->getHeader('Authorization'));
         });
 
         $this->expectException(FreeNasClientException::class);
-        $client->createUser(123001, 'asdfasdf', '/mnt/staging-vol01/asdfasdf', 'secret');
+        $task = $client->createDataset( 'staging-vol01', 'asdfasdf', 1024 ** 3 /* 1MB */);
     }
 }
