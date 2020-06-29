@@ -16,7 +16,7 @@ class ShowDatasetTest extends TestCase
 
     public function test_dataset_endpoint(): void
     {
-        $response = (string) file_get_contents(__DIR__ . '/json/dataset_show.json');
+        $response = (string) file_get_contents(__DIR__ . '/../json/dataset_show.json');
         $client = $this->getMockedClientWithResponse(200, $response, function (RequestInterface $request) {
             $this->assertSame('GET', strtoupper($request->getMethod()));
             $this->assertSame('pool/dataset/id/staging-vol01%2Ftkyp9wdqip27', $request->getUri()->getPath());

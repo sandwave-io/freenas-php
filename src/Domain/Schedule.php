@@ -63,7 +63,7 @@ class Schedule
         return Schedule::fromCronDefinition("0/{$minutes} * * * *");
     }
 
-    public static function everHours(int $hours): Schedule
+    public static function everyHours(int $hours): Schedule
     {
         return Schedule::fromCronDefinition("0 0/{$hours} * * *");
     }
@@ -107,5 +107,30 @@ class Schedule
             'begin' => $this->begin,
             'end' => $this->end
         ];
+    }
+
+    public function getMinutes(): string
+    {
+        return $this->minute;
+    }
+
+    public function getHours(): string
+    {
+        return $this->hour;
+    }
+
+    public function getDayOfTheMonth(): string
+    {
+        return $this->dayOfTheMonth;
+    }
+
+    public function getMonth(): string
+    {
+        return $this->month;
+    }
+
+    public function getDayOfTheWeek(): string
+    {
+        return $this->dayOfTheWeek;
     }
 }

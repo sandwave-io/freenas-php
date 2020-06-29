@@ -16,7 +16,7 @@ class IndexPoolTest extends TestCase
 
     public function test_pool_endpoint(): void
     {
-        $response = (string) file_get_contents(__DIR__ . '/json/pool_index.json');
+        $response = (string) file_get_contents(__DIR__ . '/../json/pool_index.json');
         $client = $this->getMockedClientWithResponse(200, $response, function (RequestInterface $request) {
             $this->assertSame('GET', strtoupper($request->getMethod()));
             $this->assertSame('pool', $request->getUri()->getPath());
@@ -30,7 +30,7 @@ class IndexPoolTest extends TestCase
 
     public function test_pool_endpoint_wrong_name(): void
     {
-        $response = (string) file_get_contents(__DIR__ . '/json/pool_index.json');
+        $response = (string) file_get_contents(__DIR__ . '/../json/pool_index.json');
         $client = $this->getMockedClientWithResponse(200, $response, function (RequestInterface $request) {
             $this->assertSame('GET', strtoupper($request->getMethod()));
             $this->assertSame('pool', $request->getUri()->getPath());

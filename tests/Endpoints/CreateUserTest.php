@@ -27,7 +27,7 @@ class CreateUserTest extends TestCase
 
     public function test_user_endpoint_422(): void
     {
-        $response = (string) file_get_contents(__DIR__ . '/json/user_create_validation_error.json');
+        $response = (string) file_get_contents(__DIR__ . '/../json/user_create_validation_error.json');
         $client = $this->getMockedClientWithResponse(422, $response, function (RequestInterface $request) {
             $this->assertSame('POST', strtoupper($request->getMethod()));
             $this->assertSame('user', $request->getUri()->getPath());

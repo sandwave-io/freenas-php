@@ -15,7 +15,7 @@ class CreateDatasetTest extends TestCase
 
     public function test_user_endpoint(): void
     {
-        $response = (string) file_get_contents(__DIR__ . '/json/dataset_show.json');
+        $response = (string) file_get_contents(__DIR__ . '/../json/dataset_show.json');
         $client = $this->getMockedClientWithResponse(200, $response, function (RequestInterface $request) {
             $this->assertSame('POST', strtoupper($request->getMethod()));
             $this->assertSame('pool/dataset', $request->getUri()->getPath());
@@ -29,7 +29,7 @@ class CreateDatasetTest extends TestCase
 
     public function test_user_endpoint_422(): void
     {
-        $response = (string) file_get_contents(__DIR__ . '/json/dataset_create_validation_error.json');
+        $response = (string) file_get_contents(__DIR__ . '/../json/dataset_create_validation_error.json');
         $client = $this->getMockedClientWithResponse(422, $response, function (RequestInterface $request) {
             $this->assertSame('POST', strtoupper($request->getMethod()));
             $this->assertSame('pool/dataset', $request->getUri()->getPath());

@@ -18,7 +18,7 @@ class IndexTaskTest extends TestCase
 
     public function test_task_endpoint(): void
     {
-        $response = (string) file_get_contents(__DIR__ . '/json/task_index.json');
+        $response = (string) file_get_contents(__DIR__ . '/../json/task_index.json');
         $client = $this->getMockedClientWithResponse(200, $response, function (RequestInterface $request) {
             $this->assertSame('GET', strtoupper($request->getMethod()));
             $this->assertSame('pool/snapshottask', $request->getUri()->getPath());

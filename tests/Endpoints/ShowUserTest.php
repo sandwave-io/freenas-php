@@ -15,7 +15,7 @@ class ShowUserTest extends TestCase
 
     public function test_user_endpoint(): void
     {
-        $response = (string) file_get_contents(__DIR__ . '/json/user_show.json');
+        $response = (string) file_get_contents(__DIR__ . '/../json/user_show.json');
         $client = $this->getMockedClientWithResponse(200, $response, function (RequestInterface $request) {
             $this->assertSame('GET', strtoupper($request->getMethod()));
             $this->assertSame('user/id/42', $request->getUri()->getPath());

@@ -18,7 +18,7 @@ class ShowTaskTest extends TestCase
 
     public function test_task_endpoint(): void
     {
-        $response = (string) file_get_contents(__DIR__ . '/json/task_show.json');
+        $response = (string) file_get_contents(__DIR__ . '/../json/task_show.json');
         $client = $this->getMockedClientWithResponse(200, $response, function (RequestInterface $request) {
             $this->assertSame('GET', strtoupper($request->getMethod()));
             $this->assertSame('pool/snapshottask/id/8', $request->getUri()->getPath());
