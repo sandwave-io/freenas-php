@@ -9,28 +9,28 @@ use PHPUnit\Framework\TestCase;
 /** @covers \PCextreme\FreeNAS\Support\FreeNasResponse */
 class ResponseObjectTest extends TestCase
 {
-    public function test_get_text()
+    public function test_get_text(): void
     {
         $response = FreeNasResponse::fromString('This is text');
 
         $this->assertSame('This is text', $response->text());
     }
 
-    public function test_to_string()
+    public function test_to_string(): void
     {
         $response = FreeNasResponse::fromString('This is text');
 
         $this->assertSame('This is text', (string) $response);
     }
 
-    public function test_parse_json()
+    public function test_parse_json(): void
     {
         $response = FreeNasResponse::fromString('{"foo": "bar"}');
 
         $this->assertSame(['foo' => 'bar'], $response->json());
     }
 
-    public function test_invalid_json()
+    public function test_invalid_json(): void
     {
         $response = FreeNasResponse::fromString('{"foo":  <><>>>>><<<< {{{{{{{{{{{{) "bar"}');
 

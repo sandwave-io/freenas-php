@@ -9,19 +9,19 @@ use PHPUnit\Framework\TestCase;
 /** @covers \PCextreme\FreeNAS\Domain\Schedule */
 class ScheduleObjectTest extends TestCase
 {
-    public function test_create_schedule_from_cron()
+    public function test_create_schedule_from_cron(): void
     {
         $schedule = Schedule::fromCronDefinition('* * * * *');
         $this->assertInstanceOf(Schedule::class, $schedule);
     }
 
-    public function test_create_schedule_from_invalid_cron()
+    public function test_create_schedule_from_invalid_cron(): void
     {
         $this->expectException(InvalidArgumentException::class);
         Schedule::fromCronDefinition('* * * *');
     }
 
-    public function test_create_schedule_get_properties()
+    public function test_create_schedule_get_properties(): void
     {
         $schedule = Schedule::fromCronDefinition('1 2 3 4 5');
 
@@ -36,7 +36,7 @@ class ScheduleObjectTest extends TestCase
         ], $schedule->toArray());
     }
 
-    public function test_create_schedule_from_array()
+    public function test_create_schedule_from_array(): void
     {
         $schedule = Schedule::fromArray([
             'minute' => '1',
@@ -51,7 +51,7 @@ class ScheduleObjectTest extends TestCase
         $this->assertInstanceOf(Schedule::class, $schedule);
     }
 
-    public function test_cron_preset_every_minute()
+    public function test_cron_preset_every_minute(): void
     {
         $schedule = Schedule::everyMinutes(2);
         $this->assertSame('0/2', $schedule->getMinutes());
@@ -61,7 +61,7 @@ class ScheduleObjectTest extends TestCase
         $this->assertSame('*', $schedule->getDayOfTheWeek());
     }
 
-    public function test_cron_preset_every_hour()
+    public function test_cron_preset_every_hour(): void
     {
         $schedule = Schedule::everyHours(2);
         $this->assertSame('0', $schedule->getMinutes());
@@ -71,7 +71,7 @@ class ScheduleObjectTest extends TestCase
         $this->assertSame('*', $schedule->getDayOfTheWeek());
     }
 
-    public function test_cron_preset_every_day()
+    public function test_cron_preset_every_day(): void
     {
         $schedule = Schedule::everyDay();
         $this->assertSame('0', $schedule->getMinutes());
@@ -81,7 +81,7 @@ class ScheduleObjectTest extends TestCase
         $this->assertSame('*', $schedule->getDayOfTheWeek());
     }
 
-    public function test_cron_preset_every_week()
+    public function test_cron_preset_every_week(): void
     {
         $schedule = Schedule::everyWeek();
         $this->assertSame('0', $schedule->getMinutes());
@@ -91,7 +91,7 @@ class ScheduleObjectTest extends TestCase
         $this->assertSame('0', $schedule->getDayOfTheWeek());
     }
 
-    public function test_cron_preset_every_month()
+    public function test_cron_preset_every_month(): void
     {
         $schedule = Schedule::everyMonth();
         $this->assertSame('0', $schedule->getMinutes());

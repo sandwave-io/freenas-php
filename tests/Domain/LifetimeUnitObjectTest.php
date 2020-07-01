@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 /** @covers \PCextreme\FreeNAS\Domain\LifetimeUnit */
 class LifetimeUnitObjectTest extends TestCase
 {
-    public function test_create_lifetime_unit_from_helper_functions()
+    public function test_create_lifetime_unit_from_helper_functions(): void
     {
         $this->assertSame(LifetimeUnit::UNIT_HOUR, (string) LifetimeUnit::hour());
         $this->assertSame(LifetimeUnit::UNIT_DAY, (string) LifetimeUnit::day());
@@ -18,13 +18,13 @@ class LifetimeUnitObjectTest extends TestCase
         $this->assertSame(LifetimeUnit::UNIT_YEAR, (string) LifetimeUnit::year());
     }
 
-    public function test_validation_for_unsupported_types()
+    public function test_validation_for_unsupported_types(): void
     {
         $this->expectException(UnexpectedValueException::class);
         LifetimeUnit::fromString('not a real unit');
     }
 
-    public function test_is_equal()
+    public function test_is_equal(): void
     {
         $this->assertTrue(LifetimeUnit::hour()->isEqual(LifetimeUnit::hour()));
         $this->assertTrue(((string) LifetimeUnit::hour()) === ((string) LifetimeUnit::hour()));

@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 /** @covers \PCextreme\FreeNAS\Domain\User */
 class UserObjectTest extends TestCase
 {
-    public function test_create_user_from_array()
+    public function test_create_user_from_array(): void
     {
         $data = json_decode((string) file_get_contents(__DIR__ . '/../json/user_show.json'), true);
 

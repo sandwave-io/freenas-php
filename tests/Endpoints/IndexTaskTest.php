@@ -28,6 +28,7 @@ class IndexTaskTest extends TestCase
 
         $tasks = $client->getSnapshotTasks();
         $this->assertInstanceOf(TaskCollection::class, $tasks);
+        assert($tasks[0] !== null);
         $task = $tasks[0];
 
         $this->assertInstanceOf(Task::class, $task);

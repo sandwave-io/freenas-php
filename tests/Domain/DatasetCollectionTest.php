@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 /** @covers \PCextreme\FreeNAS\Domain\DatasetCollection */
 class DatasetCollectionTest extends TestCase
 {
-    public function test_create_dataset_collection_from_array()
+    public function test_create_dataset_collection_from_array(): void
     {
         $data = json_decode((string) file_get_contents(__DIR__ . '/../json/dataset_index.json'), true);
 
@@ -23,6 +23,9 @@ class DatasetCollectionTest extends TestCase
         }
 
         $this->assertTrue(isset($collection[1]), 'The isset() works on the collection.');
+        $this->assertNotNull($collection[1], 'The item exists within the collection.');
+        assert($collection[1] !== null);
+        assert($collection[2] !== null);
 
         $this->assertNotSame($collection[1]->getId(), $collection[2]->getId(), 'Different indexes have different values.');
         $collection[1] = $collection[2];

@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 /** @covers \PCextreme\FreeNAS\Domain\Task */
 class TaskObjectTest extends TestCase
 {
-    public function test_create_task_from_array()
+    public function test_create_task_from_array(): void
     {
         $data = json_decode((string) file_get_contents(__DIR__ . '/../json/task_show.json'), true);
 

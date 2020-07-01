@@ -27,6 +27,7 @@ class IndexDatasetTest extends TestCase
 
         $datasets = $client->getDatasets('staging-vol01');
         $this->assertInstanceOf(DatasetCollection::class, $datasets);
+        assert($datasets[0] !== null);
         $dataset = $datasets[0];
         $this->assertInstanceOf(Dataset::class, $dataset);
 
