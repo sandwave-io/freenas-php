@@ -18,7 +18,7 @@
         "friendsofphp/php-cs-fixer": "^2.16",
         "phpstan/phpstan": "^0.12.25",
         "phpunit/phpunit": "^7.5",
-        "uptimeproject/php-cs-fixer-config": "^1.1",
+        "uptimeproject/php-cs-fixer-config": "^1.1"
     },
     "autoload": {
         "psr-4": {
