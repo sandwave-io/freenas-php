@@ -18,14 +18,14 @@ class BasicAuthClient
     /** @var Client */
     private $client;
 
-    public function __construct(string $baseUrl, string $username, string $password)
+    public function __construct(string $baseUrl, string $username, string $password, array $guzzleOptions = [])
     {
         $this->username = $username;
         $this->password = $password;
 
-        $this->client = new Client([
+        $this->client = new Client(array_merge($guzzleOptions, [
             'base_uri' => $baseUrl,
-        ]);
+        ]));
     }
 
     public function setClient(Client $client): void

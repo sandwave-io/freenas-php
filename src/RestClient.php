@@ -18,9 +18,9 @@ final class RestClient
     /** @var BasicAuthClient */
     private $client;
 
-    public function __construct(string $baseUrl, string $username, string $password)
+    public function __construct(string $baseUrl, string $username, string $password, array $guzzleOptions = [])
     {
-        $this->client = new BasicAuthClient($baseUrl, $username, $password);
+        $this->client = new BasicAuthClient($baseUrl, $username, $password, $guzzleOptions);
     }
 
     public function setClient(BasicAuthClient $client): void
