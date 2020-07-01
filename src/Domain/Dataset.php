@@ -7,6 +7,7 @@ namespace PCextreme\FreeNAS\Domain;
 class Dataset
 {
     const TYPE_FILESYSTEM = 'FILESYSTEM';
+    const TYPE_VOLUME = 'VOLUME';
 
     /** @var string */
     private $id;

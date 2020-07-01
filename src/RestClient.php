@@ -42,11 +42,11 @@ final class RestClient
         throw new NotFoundException("Could not resolve pool [$name]");
     }
 
-    public function createDataset(string $volume, string $name, int $size, ?string $comment = null): Dataset
+    public function createDataset(string $volume, string $name, int $size, ?string $comment = null, string $type = Dataset::TYPE_VOLUME): Dataset
     {
         $response = $this->client->post('pool/dataset', [
             'name' => $name,
-            'type' => 'VOLUME',
+            'type' => Dataset::TYPE_VOLUME,
             'volsize' => $size,
             'comments' => $comment ?? '',
         ], [], 200)->json();
@@ -113,13 +113,13 @@ final class RestClient
         return Task::fromArray($this->client->get("pool/snapshottask/id/{$taskId}")->json());
     }
 
-    public function createSnapshotTask(string $volume, string $datasetId, Schedule $schedule, int $lifetimeValue, LifetimeUnit $lifetimeUnit): Task
+    public function createSnapshotTask(string $volume, string $datasetId, Schedule $schedule, int $lifetimeValue, LifetimeUnit $lifetimeUnit, string $namingSchema = '%Y_%m_%d_%H_%M'): Task
     {
         $path = urlencode("{$volume}/{$datasetId}");
         $response = $this->client->post('user', [
             'dataset' => $path,
             'recursive' => false,
-            'naming_schema' => '%Y_%m_%d_%H_%M',
+            'naming_schema' => $namingSchema,
             'lifetime_value' => $lifetimeValue,
             'lifetime_unit' => (string) $lifetimeUnit,
             'schedule' => $schedule->toArray(),
