@@ -65,7 +65,6 @@ final class RestClient
         return Dataset::fromArray($this->client->get("pool/dataset/id/{$path}")->json());
     }
 
-
     public function createUser(
         int $uid,
         string $name,
@@ -105,7 +104,7 @@ final class RestClient
 
     public function getSnapshotTasks(): TaskCollection
     {
-        return TaskCollection::fromArray($this->client->get("pool/snapshottask")->json());
+        return TaskCollection::fromArray($this->client->get('pool/snapshottask')->json());
     }
 
     public function getSnapshotTask(int $taskId): Task

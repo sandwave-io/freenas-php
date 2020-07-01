@@ -25,7 +25,7 @@ class CreateTaskTest extends TestCase
             $this->assertNotEmpty($request->getHeader('Authorization'));
         });
 
-        $task = $client->createSnapshotTask( 'staging-vol01', 'asdfasdf', Schedule::everyDay(),7, LifetimeUnit::day());
+        $task = $client->createSnapshotTask('staging-vol01', 'asdfasdf', Schedule::everyDay(), 7, LifetimeUnit::day());
         $this->assertInstanceOf(Task::class, $task);
     }
 

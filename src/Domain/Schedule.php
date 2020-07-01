@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace PCextreme\FreeNAS\Domain;
 
@@ -70,17 +70,17 @@ class Schedule
 
     public static function everyDay(): Schedule
     {
-        return Schedule::fromCronDefinition("0 0 * * *");
+        return Schedule::fromCronDefinition('0 0 * * *');
     }
 
     public static function everyWeek(): Schedule
     {
-        return Schedule::fromCronDefinition("0 0 * * 0");
+        return Schedule::fromCronDefinition('0 0 * * 0');
     }
 
     public static function everyMonth(): Schedule
     {
-        return Schedule::fromCronDefinition("0 0 0 * *");
+        return Schedule::fromCronDefinition('0 0 0 * *');
     }
 
     public static function fromArray(array $data): Schedule
@@ -105,7 +105,7 @@ class Schedule
             'month' => $this->month,
             'dow' => $this->dayOfTheWeek,
             'begin' => $this->begin,
-            'end' => $this->end
+            'end' => $this->end,
         ];
     }
 

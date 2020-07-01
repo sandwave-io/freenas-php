@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace PCextreme\FreeNAS\Tests\Domain;
 

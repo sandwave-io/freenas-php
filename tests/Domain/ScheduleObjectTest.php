@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace PCextreme\FreeNAS\Tests\Domain;
 
@@ -32,7 +32,7 @@ class ScheduleObjectTest extends TestCase
             'month' => '4',
             'dow' => '5',
             'begin' => '00:00',
-            'end' => '23:59'
+            'end' => '23:59',
         ], $schedule->toArray());
     }
 
@@ -45,7 +45,7 @@ class ScheduleObjectTest extends TestCase
             'month' => '4',
             'dow' => '5',
             'begin' => '00:00',
-            'end' => '23:59'
+            'end' => '23:59',
         ]);
 
         $this->assertInstanceOf(Schedule::class, $schedule);

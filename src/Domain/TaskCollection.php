@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace PCextreme\FreeNAS\Domain;
 
@@ -48,7 +48,7 @@ class TaskCollection implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * @param int|null $offset
-     * @param Task   $value
+     * @param Task     $value
      */
     public function offsetSet($offset, $value): void
     {

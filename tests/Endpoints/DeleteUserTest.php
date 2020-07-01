@@ -2,7 +2,6 @@
 
 namespace PCextreme\FreeNAS\Tests\Endpoints;
 
-use PCextreme\FreeNAS\Domain\User;
 use PCextreme\FreeNAS\Exceptions\FreeNasClientException;
 use PCextreme\FreeNAS\Tests\Helpers\MockClientTrait;
 use PHPUnit\Framework\TestCase;

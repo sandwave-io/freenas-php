@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace PCextreme\FreeNAS\Tests\Domain;
 
@@ -15,7 +15,7 @@ class TaskCollectionTest extends TestCase
 
         $collection = TaskCollection::fromArray($data);
 
-        $this->assertEquals(7, $collection->count(), 'Collection supports count.');
+        $this->assertSame(7, $collection->count(), 'Collection supports count.');
 
         foreach ($collection as $dataset) {
             $this->assertInstanceOf(Task::class, $dataset, 'Collection is iterable and contains datasets.');
@@ -24,9 +24,9 @@ class TaskCollectionTest extends TestCase
 
         $this->assertTrue(isset($collection[1]), 'The isset() works on the collection.');
 
-        $this->assertNotEquals($collection[1]->getId(), $collection[2]->getId(), 'Different indexes have different values.');
+        $this->assertNotSame($collection[1]->getId(), $collection[2]->getId(), 'Different indexes have different values.');
         $collection[1] = $collection[2];
-        $this->assertEquals($collection[1]->getId(), $collection[2]->getId(), 'Different indexes have same values after assigning.');
+        $this->assertSame($collection[1]->getId(), $collection[2]->getId(), 'Different indexes have same values after assigning.');
 
         $currentSize = $collection->count();
         $this->assertNull($collection[$currentSize], 'Index of size should be null.');

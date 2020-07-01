@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace PCextreme\FreeNAS\Domain;
 
@@ -54,7 +54,7 @@ class DatasetCollection implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * @param int|null $offset
-     * @param Dataset   $value
+     * @param Dataset  $value
      */
     public function offsetSet($offset, $value): void
     {

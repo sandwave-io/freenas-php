@@ -30,7 +30,7 @@ class ShowTaskTest extends TestCase
         $this->assertInstanceOf(Task::class, $task);
 
         $this->assertSame(8, $task->getId());
-        $this->assertSame("staging-vol01/s2vzaxgxanlv", $task->getDataset());
+        $this->assertSame('staging-vol01/s2vzaxgxanlv', $task->getDataset());
         $this->assertSame(2, $task->getLifetimeValue());
         $this->assertTrue($task->getLifetimeUnit()->isEqual(LifetimeUnit::day()));
         $this->assertSame(false, $task->isRecursive());
@@ -38,7 +38,7 @@ class ShowTaskTest extends TestCase
 
     public function test_task_endpoint_not_found(): void
     {
-        $client = $this->getMockedClientWithResponse(404, "", function (RequestInterface $request) {
+        $client = $this->getMockedClientWithResponse(404, '', function (RequestInterface $request) {
             $this->assertSame('GET', strtoupper($request->getMethod()));
             $this->assertSame('pool/snapshottask/id/7', $request->getUri()->getPath());
             $this->assertSame('', $request->getUri()->getQuery());

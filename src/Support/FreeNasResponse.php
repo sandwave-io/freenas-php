@@ -2,7 +2,6 @@
 
 namespace PCextreme\FreeNAS\Support;
 
-use PCextreme\FreeNAS\Exceptions\FreeNasClientException;
 use PCextreme\FreeNAS\Exceptions\UnexpectedValueException;
 
 class FreeNasResponse

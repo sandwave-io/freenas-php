@@ -30,15 +30,15 @@ class IndexDatasetTest extends TestCase
         $dataset = $datasets[0];
         $this->assertInstanceOf(Dataset::class, $dataset);
 
-        $this->assertSame("staging-vol01/mj4io2xak1ga", $dataset->getName());
-        $this->assertSame("staging-vol01", $dataset->getPool());
+        $this->assertSame('staging-vol01/mj4io2xak1ga', $dataset->getName());
+        $this->assertSame('staging-vol01', $dataset->getPool());
         $this->assertSame(Dataset::TYPE_FILESYSTEM, $dataset->getType());
-        $this->assertSame("/mnt/staging-vol01/mj4io2xak1ga", $dataset->getMountPoint());
+        $this->assertSame('/mnt/staging-vol01/mj4io2xak1ga', $dataset->getMountPoint());
     }
 
     public function test_dataset_endpoint_not_found(): void
     {
-        $client = $this->getMockedClientWithResponse(404, "", function (RequestInterface $request) {
+        $client = $this->getMockedClientWithResponse(404, '', function (RequestInterface $request) {
             $this->assertSame('GET', strtoupper($request->getMethod()));
             $this->assertSame('pool/dataset/id/staging-vol01', $request->getUri()->getPath());
             $this->assertSame('', $request->getUri()->getQuery());

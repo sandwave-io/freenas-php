@@ -1,8 +1,6 @@
-<?php
-
+<?php declare(strict_types = 1);
 
 namespace PCextreme\FreeNAS\Domain;
-
 
 use PCextreme\FreeNAS\Exceptions\UnexpectedValueException;
 
@@ -22,6 +20,11 @@ class LifetimeUnit
         $this->value = $unit;
     }
 
+    public function __toString(): string
+    {
+        return $this->value;
+    }
+
     public static function fromString(string $unit): LifetimeUnit
     {
         $supportedUnits = [
@@ -33,7 +36,7 @@ class LifetimeUnit
         ];
 
         if (! in_array($unit, $supportedUnits)) {
-            throw new UnexpectedValueException("Lifetime unit {$unit} not supported, supported units: ".implode(', ', $supportedUnits));
+            throw new UnexpectedValueException("Lifetime unit {$unit} not supported, supported units: " . implode(', ', $supportedUnits));
         }
 
         return new LifetimeUnit($unit);
@@ -70,11 +73,6 @@ class LifetimeUnit
     }
 
     public function getValue(): string
-    {
-        return $this->value;
-    }
-
-    public function __toString(): string
     {
         return $this->value;
     }

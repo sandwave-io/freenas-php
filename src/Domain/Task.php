@@ -1,8 +1,6 @@
-<?php
-
+<?php declare(strict_types = 1);
 
 namespace PCextreme\FreeNAS\Domain;
-
 
 class Task
 {

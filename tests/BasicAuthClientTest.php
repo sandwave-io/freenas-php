@@ -8,7 +8,6 @@ use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use PCextreme\FreeNAS\Exceptions\FreeNasClientException;
 use PCextreme\FreeNAS\Exceptions\NotFoundException;
-use PCextreme\FreeNAS\RestClient;
 use PCextreme\FreeNAS\Support\BasicAuthClient;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
@@ -62,9 +61,6 @@ class BasicAuthClientTest extends TestCase
             $client->{$method}('test');
         }
     }
-
-
-
 
     private function getMockedClient(int $responseCode, string $responseBody, ?callable $assertClosure = null): BasicAuthClient
     {

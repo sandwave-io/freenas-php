@@ -23,7 +23,7 @@ class CreateDatasetTest extends TestCase
             $this->assertNotEmpty($request->getHeader('Authorization'));
         });
 
-        $task = $client->createDataset( 'staging-vol01', 'asdfasdf', 1024 ** 3 /* 1MB */);
+        $task = $client->createDataset('staging-vol01', 'asdfasdf', 1024 ** 3 /* 1MB */);
         $this->assertInstanceOf(Dataset::class, $task);
     }
 
@@ -38,6 +38,6 @@ class CreateDatasetTest extends TestCase
         });
 
         $this->expectException(FreeNasClientException::class);
-        $task = $client->createDataset( 'staging-vol01', 'asdfasdf', 1024 ** 3 /* 1MB */);
+        $task = $client->createDataset('staging-vol01', 'asdfasdf', 1024 ** 3 /* 1MB */);
     }
 }
