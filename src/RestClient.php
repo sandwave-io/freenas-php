@@ -65,6 +65,14 @@ final class RestClient
         return Dataset::fromArray($this->client->get("pool/dataset/id/{$path}")->json());
     }
 
+    public function resizeDataset(string $volume, string $datasetId, int $size): void
+    {
+        $path = urlencode("{$volume}/{$datasetId}");
+        $this->client->put("pool/dataset/id/{$path}", [
+            'volsize' => $size,
+        ]);
+    }
+
     public function deleteDataset(string $volume, string $datasetId): void
     {
         $path = urlencode("{$volume}/{$datasetId}");
