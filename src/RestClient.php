@@ -65,6 +65,12 @@ final class RestClient
         return Dataset::fromArray($this->client->get("pool/dataset/id/{$path}")->json());
     }
 
+    public function deleteDataset(string $volume, string $datasetId): void
+    {
+        $path = urlencode("{$volume}/{$datasetId}");
+        $this->client->delete("pool/dataset/id/{$path}");
+    }
+
     public function createUser(
         int $uid,
         string $name,
@@ -125,5 +131,10 @@ final class RestClient
         ], [], 200);
 
         return Task::fromArray($response->json());
+    }
+
+    public function deleteSnapshotTask(int $taskId): void
+    {
+        $this->client->delete("pool/snapshottask/id/{$taskId}");
     }
 }
