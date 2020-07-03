@@ -1,13 +1,13 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Tests\Endpoints;
+namespace SandwaveIo\FreeNAS\Tests\Endpoints;
 
-use PCextreme\FreeNAS\Exceptions\FreeNasClientException;
-use PCextreme\FreeNAS\Tests\Helpers\MockClientTrait;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
+use SandwaveIo\FreeNAS\Exceptions\FreeNasClientException;
+use SandwaveIo\FreeNAS\Tests\Helpers\MockClientTrait;
 
-/** @covers \PCextreme\FreeNAS\RestClient::resizeDataset */
+/** @covers \SandwaveIo\FreeNAS\RestClient::resizeDataset */
 class ResizeDatasetTest extends TestCase
 {
     use MockClientTrait;

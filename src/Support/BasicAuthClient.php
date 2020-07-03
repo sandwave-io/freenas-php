@@ -1,11 +1,11 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Support;
+namespace SandwaveIo\FreeNAS\Support;
 
 use GuzzleHttp\Client;
-use PCextreme\FreeNAS\Exceptions\FreeNasClientException;
-use PCextreme\FreeNAS\Exceptions\NotFoundException;
 use Psr\Http\Message\ResponseInterface;
+use SandwaveIo\FreeNAS\Exceptions\FreeNasClientException;
+use SandwaveIo\FreeNAS\Exceptions\NotFoundException;
 
 class BasicAuthClient
 {

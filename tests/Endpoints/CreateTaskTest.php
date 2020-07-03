@@ -1,16 +1,16 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Tests\Endpoints;
+namespace SandwaveIo\FreeNAS\Tests\Endpoints;
 
-use PCextreme\FreeNAS\Domain\LifetimeUnit;
-use PCextreme\FreeNAS\Domain\Schedule;
-use PCextreme\FreeNAS\Domain\Task;
-use PCextreme\FreeNAS\Exceptions\FreeNasClientException;
-use PCextreme\FreeNAS\Tests\Helpers\MockClientTrait;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
+use SandwaveIo\FreeNAS\Domain\LifetimeUnit;
+use SandwaveIo\FreeNAS\Domain\Schedule;
+use SandwaveIo\FreeNAS\Domain\Task;
+use SandwaveIo\FreeNAS\Exceptions\FreeNasClientException;
+use SandwaveIo\FreeNAS\Tests\Helpers\MockClientTrait;
 
-/** @covers \PCextreme\FreeNAS\RestClient::createSnapshotTask */
+/** @covers \SandwaveIo\FreeNAS\RestClient::createSnapshotTask */
 class CreateTaskTest extends TestCase
 {
     use MockClientTrait;

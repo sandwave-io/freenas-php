@@ -1,6 +1,6 @@
 {
-    "name": "pcextreme/freenas",
-    "description": "FreeNAS PHP SDK.",
+    "name": "sandwave-io/freenas",
+    "description": "A PHP SDK for the FreeNAS RESTful API (v2)",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -22,12 +22,12 @@
     },
     "autoload": {
         "psr-4": {
-            "PCextreme\\FreeNAS\\": "./src"
+            "SandwaveIo\\FreeNAS\\": "./src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PCextreme\\FreeNAS\\Tests\\": "tests/"
+            "SandwaveIo\\FreeNAS\\Tests\\": "tests/"
         }
     },
     "config": {

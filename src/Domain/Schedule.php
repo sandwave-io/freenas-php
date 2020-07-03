@@ -1,8 +1,8 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Domain;
+namespace SandwaveIo\FreeNAS\Domain;
 
-use PCextreme\FreeNAS\Exceptions\InvalidArgumentException;
+use SandwaveIo\FreeNAS\Exceptions\InvalidArgumentException;
 
 class Schedule
 {

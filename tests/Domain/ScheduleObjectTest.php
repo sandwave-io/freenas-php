@@ -1,12 +1,12 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Tests\Domain;
+namespace SandwaveIo\FreeNAS\Tests\Domain;
 
-use PCextreme\FreeNAS\Domain\Schedule;
-use PCextreme\FreeNAS\Exceptions\InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
+use SandwaveIo\FreeNAS\Domain\Schedule;
+use SandwaveIo\FreeNAS\Exceptions\InvalidArgumentException;
 
-/** @covers \PCextreme\FreeNAS\Domain\Schedule */
+/** @covers \SandwaveIo\FreeNAS\Domain\Schedule */
 class ScheduleObjectTest extends TestCase
 {
     public function test_create_schedule_from_cron(): void

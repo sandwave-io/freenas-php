@@ -1,12 +1,12 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Tests\Domain;
+namespace SandwaveIo\FreeNAS\Tests\Domain;
 
-use PCextreme\FreeNAS\Domain\Dataset;
-use PCextreme\FreeNAS\Domain\DatasetCollection;
 use PHPUnit\Framework\TestCase;
+use SandwaveIo\FreeNAS\Domain\Dataset;
+use SandwaveIo\FreeNAS\Domain\DatasetCollection;
 
-/** @covers \PCextreme\FreeNAS\Domain\DatasetCollection */
+/** @covers \SandwaveIo\FreeNAS\Domain\DatasetCollection */
 class DatasetCollectionTest extends TestCase
 {
     public function test_create_dataset_collection_from_array(): void

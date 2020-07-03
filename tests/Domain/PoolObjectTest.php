@@ -1,11 +1,11 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Tests\Domain;
+namespace SandwaveIo\FreeNAS\Tests\Domain;
 
-use PCextreme\FreeNAS\Domain\Pool;
 use PHPUnit\Framework\TestCase;
+use SandwaveIo\FreeNAS\Domain\Pool;
 
-/** @covers \PCextreme\FreeNAS\Domain\Pool */
+/** @covers \SandwaveIo\FreeNAS\Domain\Pool */
 class PoolObjectTest extends TestCase
 {
     public function test_create_pool_from_array(): void

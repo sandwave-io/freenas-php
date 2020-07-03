@@ -1,17 +1,17 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS;
+namespace SandwaveIo\FreeNAS;
 
-use PCextreme\FreeNAS\Domain\Dataset;
-use PCextreme\FreeNAS\Domain\DatasetCollection;
-use PCextreme\FreeNAS\Domain\LifetimeUnit;
-use PCextreme\FreeNAS\Domain\Pool;
-use PCextreme\FreeNAS\Domain\Schedule;
-use PCextreme\FreeNAS\Domain\Task;
-use PCextreme\FreeNAS\Domain\TaskCollection;
-use PCextreme\FreeNAS\Domain\User;
-use PCextreme\FreeNAS\Exceptions\NotFoundException;
-use PCextreme\FreeNAS\Support\BasicAuthClient;
+use SandwaveIo\FreeNAS\Domain\Dataset;
+use SandwaveIo\FreeNAS\Domain\DatasetCollection;
+use SandwaveIo\FreeNAS\Domain\LifetimeUnit;
+use SandwaveIo\FreeNAS\Domain\Pool;
+use SandwaveIo\FreeNAS\Domain\Schedule;
+use SandwaveIo\FreeNAS\Domain\Task;
+use SandwaveIo\FreeNAS\Domain\TaskCollection;
+use SandwaveIo\FreeNAS\Domain\User;
+use SandwaveIo\FreeNAS\Exceptions\NotFoundException;
+use SandwaveIo\FreeNAS\Support\BasicAuthClient;
 
 final class RestClient
 {

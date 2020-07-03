@@ -1,18 +1,18 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Tests;
+namespace SandwaveIo\FreeNAS\Tests;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
-use PCextreme\FreeNAS\Exceptions\FreeNasClientException;
-use PCextreme\FreeNAS\Exceptions\NotFoundException;
-use PCextreme\FreeNAS\Support\BasicAuthClient;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
+use SandwaveIo\FreeNAS\Exceptions\FreeNasClientException;
+use SandwaveIo\FreeNAS\Exceptions\NotFoundException;
+use SandwaveIo\FreeNAS\Support\BasicAuthClient;
 
-/** @covers \PCextreme\FreeNAS\Support\BasicAuthClient */
+/** @covers \SandwaveIo\FreeNAS\Support\BasicAuthClient */
 class BasicAuthClientTest extends TestCase
 {
     public function test_construct(): void

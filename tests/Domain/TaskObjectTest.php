@@ -1,12 +1,12 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Tests\Domain;
+namespace SandwaveIo\FreeNAS\Tests\Domain;
 
-use PCextreme\FreeNAS\Domain\LifetimeUnit;
-use PCextreme\FreeNAS\Domain\Task;
 use PHPUnit\Framework\TestCase;
+use SandwaveIo\FreeNAS\Domain\LifetimeUnit;
+use SandwaveIo\FreeNAS\Domain\Task;
 
-/** @covers \PCextreme\FreeNAS\Domain\Task */
+/** @covers \SandwaveIo\FreeNAS\Domain\Task */
 class TaskObjectTest extends TestCase
 {
     public function test_create_task_from_array(): void

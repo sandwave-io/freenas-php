@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Exceptions;
+namespace SandwaveIo\FreeNAS\Exceptions;
 
 use Psr\Container\NotFoundExceptionInterface;
 

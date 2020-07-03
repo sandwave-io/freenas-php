@@ -1,12 +1,12 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Tests;
+namespace SandwaveIo\FreeNAS\Tests;
 
-use PCextreme\FreeNAS\Exceptions\UnexpectedValueException;
-use PCextreme\FreeNAS\Support\FreeNasResponse;
 use PHPUnit\Framework\TestCase;
+use SandwaveIo\FreeNAS\Exceptions\UnexpectedValueException;
+use SandwaveIo\FreeNAS\Support\FreeNasResponse;
 
-/** @covers \PCextreme\FreeNAS\Support\FreeNasResponse */
+/** @covers \SandwaveIo\FreeNAS\Support\FreeNasResponse */
 class ResponseObjectTest extends TestCase
 {
     public function test_get_text(): void

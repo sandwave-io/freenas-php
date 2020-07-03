@@ -1,17 +1,17 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Tests\Endpoints;
+namespace SandwaveIo\FreeNAS\Tests\Endpoints;
 
-use PCextreme\FreeNAS\Domain\Dataset;
-use PCextreme\FreeNAS\Domain\LifetimeUnit;
-use PCextreme\FreeNAS\Domain\Task;
-use PCextreme\FreeNAS\Exceptions\FreeNasClientException;
-use PCextreme\FreeNAS\Exceptions\NotFoundException;
-use PCextreme\FreeNAS\Tests\Helpers\MockClientTrait;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
+use SandwaveIo\FreeNAS\Domain\Dataset;
+use SandwaveIo\FreeNAS\Domain\LifetimeUnit;
+use SandwaveIo\FreeNAS\Domain\Task;
+use SandwaveIo\FreeNAS\Exceptions\FreeNasClientException;
+use SandwaveIo\FreeNAS\Exceptions\NotFoundException;
+use SandwaveIo\FreeNAS\Tests\Helpers\MockClientTrait;
 
-/** @covers \PCextreme\FreeNAS\RestClient::getSnapshotTask */
+/** @covers \SandwaveIo\FreeNAS\RestClient::getSnapshotTask */
 class ShowTaskTest extends TestCase
 {
     use MockClientTrait;

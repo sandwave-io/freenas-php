@@ -1,11 +1,11 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Tests\Domain;
+namespace SandwaveIo\FreeNAS\Tests\Domain;
 
-use PCextreme\FreeNAS\Domain\User;
 use PHPUnit\Framework\TestCase;
+use SandwaveIo\FreeNAS\Domain\User;
 
-/** @covers \PCextreme\FreeNAS\Domain\User */
+/** @covers \SandwaveIo\FreeNAS\Domain\User */
 class UserObjectTest extends TestCase
 {
     public function test_create_user_from_array(): void

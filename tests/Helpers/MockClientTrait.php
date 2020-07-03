@@ -1,14 +1,14 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Tests\Helpers;
+namespace SandwaveIo\FreeNAS\Tests\Helpers;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
-use PCextreme\FreeNAS\RestClient;
-use PCextreme\FreeNAS\Support\BasicAuthClient;
 use Psr\Http\Message\RequestInterface;
+use SandwaveIo\FreeNAS\RestClient;
+use SandwaveIo\FreeNAS\Support\BasicAuthClient;
 
 trait MockClientTrait
 {

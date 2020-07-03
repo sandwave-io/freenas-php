@@ -1,8 +1,8 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Domain;
+namespace SandwaveIo\FreeNAS\Domain;
 
-use PCextreme\FreeNAS\Exceptions\UnexpectedValueException;
+use SandwaveIo\FreeNAS\Exceptions\UnexpectedValueException;
 
 class LifetimeUnit
 {

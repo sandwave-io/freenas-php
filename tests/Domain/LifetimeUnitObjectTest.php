@@ -1,12 +1,12 @@
 <?php declare(strict_types = 1);
 
-namespace PCextreme\FreeNAS\Tests\Domain;
+namespace SandwaveIo\FreeNAS\Tests\Domain;
 
-use PCextreme\FreeNAS\Domain\LifetimeUnit;
-use PCextreme\FreeNAS\Exceptions\UnexpectedValueException;
 use PHPUnit\Framework\TestCase;
+use SandwaveIo\FreeNAS\Domain\LifetimeUnit;
+use SandwaveIo\FreeNAS\Exceptions\UnexpectedValueException;
 
-/** @covers \PCextreme\FreeNAS\Domain\LifetimeUnit */
+/** @covers \SandwaveIo\FreeNAS\Domain\LifetimeUnit */
 class LifetimeUnitObjectTest extends TestCase
 {
     public function test_create_lifetime_unit_from_helper_functions(): void
