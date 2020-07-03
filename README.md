@@ -1,11 +1,24 @@
-# FreeNAS PHP SDK
+# FreeNAS RESTful API (v2) - PHP SDK
 
 This package is built upon the v2.0 of the FreeNAS API.
 * [FreeNAS API v2.0 REST documentation](https://api.ixsystems.com/freenas/)
 
-This package is closed source.
+## How to use
 
-## How to develop
+```bash
+composer require sandwave-io/freenas-php
+```
+
+```php
+$freenas = new \SandwaveIo\FreeNAS\RestClient('https://my-freenas-install.io/api/v2.0', 'root', 'SuperSecretPassword123');
+
+// This example shows how to create a dataset, and a user that has access rights to that dataset.
+$dataset = $freenas->createDataset('store01', 'my-dataset', 20 * 1024**3);
+$user    = $freenas->createUser(1001, 'my-user', $dataset->getMountPoint(), 'SuperSecretUserPassword123');
+```
+
+
+## How to contribute
 
 Feel free to create a PR if you have any ideas for improvements. Or create an issue.
 
@@ -23,4 +36,4 @@ vendor/bin/phpunit --coverage-text
 
 ```
 
-These tools will also run in GitLab CI on MR's and pushes on master.
+These tools will also run in GitHub actions on PR's and pushes on master.
