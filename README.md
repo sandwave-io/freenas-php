@@ -10,11 +10,26 @@ composer require sandwave-io/freenas-php
 ```
 
 ```php
-$freenas = new \SandwaveIo\FreeNAS\RestClient('https://my-freenas-install.io/api/v2.0', 'root', 'SuperSecretPassword123');
+$freenas = new \SandwaveIo\FreeNAS\RestClient(
+    'https://my-freenas-install.io/api/v2.0', // base url
+    'root',                  // user
+    'SuperSecretPassword123' // password
+);
 
 // This example shows how to create a dataset, and a user that has access rights to that dataset.
-$dataset = $freenas->createDataset('store01', 'my-dataset', 20 * 1024**3);
-$user    = $freenas->createUser(1001, 'my-user', $dataset->getMountPoint(), 'SuperSecretUserPassword123');
+
+$dataset = $freenas->createDataset(
+    'store01',    // pool
+    'my-dataset', // dataset
+    20 * 1024**3  // size in bytes
+);
+
+$user = $freenas->createUser(
+    1001,                        // uid
+    'my-user',                   // username
+    $dataset->getMountPoint(),   // homedir
+    'SuperSecretUserPassword123' // password
+);
 ```
 
 
