@@ -1,5 +1,11 @@
 # FreeNAS RESTful API (v2) - PHP SDK
 
+![Codecov](https://img.shields.io/codecov/c/github/sandwave-io/freenas-php?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sandwave-io/freenas-php/CI?style=flat-square)
+![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/sandwave-io/freenas?style=flat-square)
+![Packagist PHP Version Support](https://img.shields.io/packagist/v/sandwave-io/freenas?style=flat-square)
+![Packagist Downloads](https://img.shields.io/packagist/dt/sandwave-io/freenas-php?style=flat-square)
+
 This package is built upon the v2.0 of the FreeNAS API.
 * [FreeNAS API v2.0 REST documentation](https://api.ixsystems.com/freenas/)
 
