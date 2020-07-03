@@ -95,6 +95,7 @@ final class RestClient
             'group_create' => $createGroup,
         ], [], 200)->text();
 
+        // The response given is an ID, we cast this to an integer.
         return (int) $response;
     }
 
