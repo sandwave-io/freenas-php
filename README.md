@@ -17,7 +17,7 @@ composer require sandwave-io/freenas-php
 
 ```php
 $freenas = new \SandwaveIo\FreeNAS\RestClient(
-    'https://my-freenas-install.io/api/v2.0', // base url
+    'https://my-freenas-install.io/api/v2.0/', // base url
     'root',                  // user
     'SuperSecretPassword123' // password
 );
