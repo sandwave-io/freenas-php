@@ -75,7 +75,7 @@ class BasicAuthClient
     {
         if ($response->getStatusCode() === $expectedResponse) {
             return FreeNasResponse::fromString((string) $response->getBody());
-        } elseif ($response->getStatusCode() >= 400 && $response->getStatusCode() < 500) {
+        } elseif ($response->getStatusCode() === 400) {
             throw new NotFoundException('Not found.');
         }
         throw new FreeNasClientException("Unexpected response (got {$response->getStatusCode()}, expected {$expectedResponse}). Body: " . $response->getBody());
