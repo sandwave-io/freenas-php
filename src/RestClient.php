@@ -44,6 +44,7 @@ final class RestClient
 
     public function createDataset(string $volume, string $name, int $size, ?string $comment = null, string $type = Dataset::TYPE_VOLUME): Dataset
     {
+        $path = urlencode("{$volume}/{$name}");
         $response = $this->client->post('pool/dataset', [
             'name' => $name,
             'type' => Dataset::TYPE_VOLUME,
