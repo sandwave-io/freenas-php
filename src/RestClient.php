@@ -46,7 +46,7 @@ final class RestClient
     {
         $path = urlencode("{$volume}/{$name}");
         $response = $this->client->post('pool/dataset', [
-            'name' => $name,
+            'name' => $path,
             'type' => Dataset::TYPE_VOLUME,
             'volsize' => $size,
             'comments' => $comment ?? '',
