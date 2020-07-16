@@ -44,13 +44,17 @@ final class RestClient
 
     public function createDataset(string $volume, string $name, int $size, ?string $comment = null, string $type = Dataset::TYPE_VOLUME): Dataset
     {
-        $path = "{$volume}/{$name}";
-        $response = $this->client->post('pool/dataset', [
-            'name' => $path,
-            'type' => Dataset::TYPE_VOLUME,
-            'volsize' => $size,
-            'comments' => $comment ?? '',
-        ], [], 200)->json();
+        // In the case of a VOLUME use volsize, otherwize use quota.
+        $sizeKey = ($type === Dataset::TYPE_VOLUME) ? 'volsize' : 'quota';
+
+        $payload = [
+            'name'      => "{$volume}/{$name}",
+            'type'      => $type,
+            $sizeKey    => $size,
+            'comments'  => $comment ?? '',
+        ];
+
+        $response = $this->client->post('pool/dataset', $payload, [], 200)->json();
 
         return Dataset::fromArray($response);
     }
