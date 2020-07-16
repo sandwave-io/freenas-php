@@ -20,7 +20,7 @@ class CreateTaskTest extends TestCase
         $response = (string) file_get_contents(__DIR__ . '/../json/task_show.json');
         $client = $this->getMockedClientWithResponse(200, $response, function (RequestInterface $request) {
             $this->assertSame('POST', strtoupper($request->getMethod()));
-            $this->assertSame('user', $request->getUri()->getPath());
+            $this->assertSame('pool/snapshottask', $request->getUri()->getPath());
             $this->assertSame('', $request->getUri()->getQuery());
             $this->assertNotEmpty($request->getHeader('Authorization'));
         });
@@ -34,7 +34,7 @@ class CreateTaskTest extends TestCase
         $response = (string) file_get_contents(__DIR__ . '/../json/task_create_validation_error.json');
         $client = $this->getMockedClientWithResponse(422, $response, function (RequestInterface $request) {
             $this->assertSame('POST', strtoupper($request->getMethod()));
-            $this->assertSame('user', $request->getUri()->getPath());
+            $this->assertSame('pool/snapshottask', $request->getUri()->getPath());
             $this->assertSame('', $request->getUri()->getQuery());
             $this->assertNotEmpty($request->getHeader('Authorization'));
         });

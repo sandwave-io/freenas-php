@@ -134,9 +134,8 @@ final class RestClient
 
     public function createSnapshotTask(string $volume, string $datasetId, Schedule $schedule, int $lifetimeValue, LifetimeUnit $lifetimeUnit, string $namingSchema = '%Y_%m_%d_%H_%M'): Task
     {
-        $path = urlencode("{$volume}/{$datasetId}");
-        $response = $this->client->post('user', [
-            'dataset' => $path,
+        $response = $this->client->post('pool/snapshottask', [
+            'dataset' => "{$volume}/{$datasetId}",
             'recursive' => false,
             'naming_schema' => $namingSchema,
             'lifetime_value' => $lifetimeValue,
