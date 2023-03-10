@@ -2,9 +2,8 @@ vendor
 .idea
 .env
 coverage
-.php_cs.cache
-
-html
+.php-cs-fixer.cache
+.phpunit.result.cache
+.phpunit.cache
 composer.lock
-.php_cs.cache
 clover.xml

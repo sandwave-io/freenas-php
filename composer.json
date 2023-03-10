@@ -10,15 +10,15 @@
         }
     ],
     "require": {
-        "php": "^7.1",
-        "guzzlehttp/guzzle": "^6.0",
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.5.0",
         "ext-json": "*"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.16",
-        "phpstan/phpstan": "^0.12.25",
-        "phpunit/phpunit": "^7.5",
-        "uptimeproject/php-cs-fixer-config": "^1.1"
+        "friendsofphp/php-cs-fixer": "^3.14.4",
+        "phpstan/phpstan": "^1.10.6",
+        "phpunit/phpunit": "^10.0.15",
+        "sandwave-io/php-cs-fixer-config": "^1.0.0"
     },
     "autoload": {
         "psr-4": {
@@ -32,5 +32,25 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "scripts": {
+        "test": [
+            "Composer\\Config::disableProcessTimeout",
+            "@test:types",
+            "@lint",
+            "@test:unit"
+        ],
+        "test:unit": [
+            "vendor/bin/phpunit --coverage-text"
+        ],
+        "test:types": [
+            "vendor/bin/phpstan analyze"
+        ],
+        "lint": [
+            "vendor/bin/php-cs-fixer fix --dry-run --diff --show-progress=none -vvv"
+        ],
+        "lint:fix": [
+            "vendor/bin/php-cs-fixer fix"
+        ]
     }
 }
