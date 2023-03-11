@@ -23,4 +23,14 @@ class Pool
             $data['path']
         );
     }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function getPath(): string
+    {
+        return $this->path;
+    }
 }

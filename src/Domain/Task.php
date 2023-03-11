@@ -74,4 +74,9 @@ class Task
     {
         return $this->isRecursive;
     }
+
+    public function getSchedule(): Schedule
+    {
+        return $this->schedule;
+    }
 }
