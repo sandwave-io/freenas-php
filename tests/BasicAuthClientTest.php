@@ -25,7 +25,7 @@ class BasicAuthClientTest extends TestCase
         $this->assertInstanceOf(BasicAuthClient::class, $client);
     }
 
-    public function requestVariants(): array
+    public static function requestVariants(): array
     {
         return [
             'GET request: success'  => ['get', 200, null],
@@ -43,7 +43,11 @@ class BasicAuthClientTest extends TestCase
         ];
     }
 
-    /** @dataProvider requestVariants */
+    /**
+     * @param ?class-string<\Throwable> $exception
+     *
+     * @dataProvider requestVariants
+     */
     public function test_http_methods(string $method, int $response, ?string $exception): void
     {
         $client = $this->getMockedClient($response, '', function (RequestInterface $request) use ($method) {

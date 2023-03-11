@@ -14,6 +14,8 @@ class PoolObjectTest extends TestCase
 
         $pool = Pool::fromArray($data[0]);
 
-        $this->assertInstanceOf(Pool::class, $pool);
+        self::assertInstanceOf(Pool::class, $pool);
+        self::assertSame($pool->getName(), 'staging-vol01');
+        self::assertSame($pool->getPath(), '/mnt/staging-vol01');
     }
 }

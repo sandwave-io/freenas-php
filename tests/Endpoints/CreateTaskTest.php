@@ -15,7 +15,7 @@ class CreateTaskTest extends TestCase
 {
     use MockClientTrait;
 
-    public function test_user_endpoint(): void
+    public function test_task_endpoint(): void
     {
         $response = (string) file_get_contents(__DIR__ . '/../json/task_show.json');
         $client = $this->getMockedClientWithResponse(200, $response, function (RequestInterface $request) {
@@ -29,7 +29,7 @@ class CreateTaskTest extends TestCase
         $this->assertInstanceOf(Task::class, $task);
     }
 
-    public function test_user_endpoint_422(): void
+    public function test_task_endpoint_422(): void
     {
         $response = (string) file_get_contents(__DIR__ . '/../json/task_create_validation_error.json');
         $client = $this->getMockedClientWithResponse(422, $response, function (RequestInterface $request) {
@@ -40,6 +40,6 @@ class CreateTaskTest extends TestCase
         });
 
         $this->expectException(FreeNasClientException::class);
-        $client->createUser(123001, 'asdfasdf', '/mnt/staging-vol01/asdfasdf', 'secret');
+        $task = $client->createSnapshotTask('staging-vol01', 'asdfasdf', Schedule::everyDay(), 7, LifetimeUnit::day());
     }
 }

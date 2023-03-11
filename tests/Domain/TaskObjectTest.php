@@ -20,5 +20,6 @@ class TaskObjectTest extends TestCase
         $this->assertSame(LifetimeUnit::UNIT_DAY, (string) $task->getLifetimeUnit());
         $this->assertSame(2, $task->getLifetimeValue());
         $this->assertSame(false, $task->isRecursive());
+        $this->assertSame('0', $task->getSchedule()->getMinutes());
     }
 }
